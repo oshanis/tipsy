@@ -1,0 +1,45 @@
+Here's the Scenario:
+
+Evan Sandhaus (he's actually from the NY Times) is the beneficiary of the donations. 
+His FOAF URI = http://evansandhaus.com/#me
+His email = evan@nytimes.com
+The document describing the payment information can be found at = http://payment.com/document
+
+=================================
+
+The RDF triples describing the scenario:
+
+# <#me> dc:creator <http://nytimes.com>.
+# <#me> foaf:tipjar <http://payment.com/document> .
+# <#me> foaf:mbox <mailto:me@example.com>.
+# <http://payment.com/document> pmt:hasPaymentMethod <#mypaypalaccount>.
+# <http://payment.com/document> a pmt:Document .
+# <#mypaypalaccount> a pmt:Paypal .
+
+=================================
+
+RDFa:
+
+<div xmlns:dc="http://purl.org/dc/elements/1.1/" 
+     xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+     xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt.n3" 
+     about="http://evansandhaus.com/#me"> 
+<a href="http://nytimes.com" 
+   rel="dc:creator"></a>
+<a href="http://payment.com/document" 
+   rel="foaf:tipjar"></a>
+<a href="mailto:evan@nytimes.com" 
+   rel="foaf:mbox"></a>
+</div>
+
+<div xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt.n3" 
+     about="http://payment.com/document"
+     typeof="pmt:Document"> 
+<a href="http://payment.com/document#mypaypalaccount" 
+   rel="pmt:hasPaymentMethod"></a>
+</div>
+
+<div xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt.n3" 
+     about="http://payment.com/document#mypaypalaccount"
+     typeof="pmt:Paypal">
+</div>
