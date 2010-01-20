@@ -5,8 +5,7 @@
     <em:id>tipsy@csail.mit.edu</em:id>
     <em:name>tipsy - web site licenseing and patronage</em:name>
     <em:version>0.1</em:version>
-    <em:creator>Oshani Seneviratne</em:creator>
-    <em:contributor>Adam Marcus</em:contributor>
+    <em:creator>Oshani Seneviratne and Adam Marcus</em:creator>
     <em:description>This extension enables users to contribute money to web sites they liked</em:description>
     <em:homepageURL>http://code.google.com/p/tipsy</em:homepageURL>
     <em:optionsURL>chrome://tipsy/content/options.xul</em:optionsURL>
