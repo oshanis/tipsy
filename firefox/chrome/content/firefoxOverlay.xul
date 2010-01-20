@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://tamisidebar/locale/tipsy.dtd">
+<overlay id="tipsyOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <menupopup id="viewSidebarMenu">
+    <menuitem key="key_openTipsy" observes="viewTipsy"  />
+  </menupopup>
+  
+  <keyset id="mainKeyset">
+    <key id="key_openTipsy" command="viewTipsy"
+         key="&openTipsy.commandkey;" 
+         modifiers="&openTipsy.modifierskey;" />
+  </keyset>
+  
+  <broadcasterset id="mainBroadcasterSet"> 
+    <broadcaster id="viewTipsy" 
+                 label="&tipsy.title;"
+                 autoCheck="false"
+                 type="checkbox"
+                 group="sidebar"
+                 sidebarurl="chrome://tipsy/content/tipsy.xul"
+                 sidebartitle="&tipsy.title;"
+                 oncommand="toggleSidebar('viewTipsy');" />
+  </broadcasterset>
+</overlay>

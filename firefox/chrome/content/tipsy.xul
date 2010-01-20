@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type"text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<!DOCTYPE page SYSTEM "chrome://tipsy/locale/tipsy.dtd">
+
+<page id="sbTipsy" title="&tipsy.title;"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script src="tipsy.js" type="text/javascript"></script>
+
+<vbox flex="1">
+
+    <spacer style="height: 10px"/>
+
+    <description>
+    Tipsy: Help the web content creators!
+    </description>
+  
+    <groupbox orient="vertical">
+
+        <vbox flex="1">
+ 
+        </vbox>
+
+    </groupbox> 
+
+    <vbox id="progressBox">
+    </vbox>
+
+</vbox>
+
+</page>
