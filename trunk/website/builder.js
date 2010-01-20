@@ -7,6 +7,7 @@ pick_paymethod = function() {
 
 generate_html = function() {
     // TODO: do some field verification and error correction
+    
 };
 
 jQuery(document).ready(function() {
