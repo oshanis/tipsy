@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tipsy content-creator form builder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<script src="builder.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<form>
+<p>Organization name: <input type="text" id="orgname" /></p>
+<p>Organization URL: <input type="text" id="orgurl" /></p>
+<p>
+Payment method: <select id="paymethod-choice">
+  <option value="paypal">PayPal</option>
+  <option value="website">Website</option>
+  <option value="phone">Phone</option>
+</select>
+</p>
+<div class="paymethod" id="paymethod-paypal">
+<p>Enter your paypal username: <input type="text" id="paypal-username" /></p>
+</div>
+<div class="paymethod" id="paymethod-website">
+<p>Enter your payment URL: <input type="text" id="website-url" /></p>
+</div>
+<div class="paymethod" id="paymethod-phone">
+<p>Enter your payment phone number: <input type="text" id="phone-number" /></p>
+</div>
+<button id="generate" type="button">Generate HTML</button>
+
+<textarea id="copy-html">
+</textarea>
+</form>
+</body>
+</html>
