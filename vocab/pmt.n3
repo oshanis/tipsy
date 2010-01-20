@@ -11,20 +11,22 @@
 # <http://payment.com/document#me> pmt:hasMethod <#mypaypalaccount>.
 # <#me> foaf:mbox <mailto:me@example.com>.
 
-
 :Document rdfs:subClassOf foaf:Document.
 
-:hasMethod a rdf:Property; 
+:hasPaymentMethod a rdf:Property; 
 	rdfs:domain :Document;
-	rdfs:range :Method.
+	rdfs:range :PaymentMethod.
 
-:Method a rdfs:Class.
+:PaymentMethod a rdfs:Class.
 
 #Add other types of payment methods here
 
-:Paypal rdfs:subClassOf :Method.
+:Paypal rdfs:subClassOf :PaymentMethod.
 
-:Check rdfs:subClassOf :Method.
+:Check rdfs:subClassOf :PaymentMethod.
+
+:Phone rdfs:subClassOf :PaymentMethod.
+ 
 
 
 
