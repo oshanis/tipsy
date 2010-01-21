@@ -2,15 +2,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 @prefix foaf: <http://xmlns.com/foaf/0.1/>
 
-#Look for the contact ontology for the address : http://www.w3.org/2000/10/swap/pim/contact.n3
-# Here's an example of the RDF that should be embedded within the publisher's web page
-# <#me> dc:creator <http://nytimes.com>.
-# <#me> foaf:tipjar <http://payment.com/document#me> .
-# <http://payment.com/document#me> a pmt:Document .
-# <#mypaypalaccount> a pmt:Paypal .
-# <http://payment.com/document#me> pmt:hasMethod <#mypaypalaccount>.
-# <#me> foaf:mbox <mailto:me@example.com>.
-
 :Document rdfs:subClassOf foaf:Document.
 
 :hasPaymentMethod a rdf:Property; 
@@ -21,7 +12,10 @@
 
 #Add other types of payment methods here
 
-:Paypal rdfs:subClassOf :PaymentMethod.
+:PayPal rdfs:subClassOf :PaymentMethod.
+:username a  a rdf:Property;
+	rdfs:domain :PayPal;
+	rdfs:range foaf:mbox.
 
 :Check rdfs:subClassOf :PaymentMethod.
 
