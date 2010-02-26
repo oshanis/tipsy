@@ -10,16 +10,9 @@
 <!-- Include Javascript -->
 <script src="tipsy.js" type="text/javascript"></script>
 
-<vbox style="overflow: auto">
-<groupbox>
-<description>
-  Tipsy: Help the web content creators by giving them tips, the easy way!
-</description>
-<groupbox>
   <tabbox  flex="1">
     <tabs >
        <tab label="Activity"     />
-       <tab label="Payments"         />
        <tab label="Settings" />
     </tabs>
     <tabpanels flex="1" >
@@ -32,25 +25,6 @@
         </hbox>
         <hbox>
            <button oncommand="clearHistory" align="center"><label width="10">Clear History</label></button>
-       </hbox>
-   </groupbox>
-
-       <!-- Payment Tab -->
-    <groupbox>
-        <hbox>
-           <label value="How many sites do you wish to distribute $10 to?" /> <textbox id="sites" maxlength="2"  size="2"
- oninput="validateNumberOfSitesToPay" />
-
-           <button oncommand="changeAmount"><label>Change Amount</label></button>
-       </hbox>
-        <hbox>
-           <label value="Your PayPal account is " /> <textbox id="paypal-account" disabled="true" value="oshanis@gmail.com"
- oninput="changePayPalAccount" />
-
-           <button oncommand="Set"><label>Not your PayPal account?</label></button>
-       </hbox>
-        <hbox>
-           <button oncommand="runElection"><label width="10">Run Election</label></button>
        </hbox>
    </groupbox>
 
@@ -87,9 +61,4 @@
 
     </tabpanels>
   </tabbox>
-</groupbox>
-</groupbox>
-
-</vbox>
-
 </page>
