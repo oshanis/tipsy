@@ -11,15 +11,15 @@ He has a different email address associated with his PayPal account: evan@paypal
 The RDF triples describing the scenario:
 
 # <#me> dc:creator <http://nytimes.com>.
+# <#me> rdfs:label "Evan Sandhaus" .
 # <#me> foaf:tipjar <http://payment.com/document> .
-# <#me> foaf:mbox <mailto:me@example.com>.
 # <http://payment.com/document> pmt:hasPaymentMethod <#mypaypalaccount>.
 # <http://payment.com/document> a pmt:Document .
 # <#mypaypalaccount> a pmt:PayPal .
 # <#mypaypalaccount> <pmt:username> <mailto:me@paypal.com> .
-
 =================================
 
 RDFa:
 
-<span xmlns:dc="http://purl.org/dc/elements/1.1/"      xmlns:foaf="http://xmlns.com/foaf/0.1/"      xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#"      about="http://evansandhaus.com/#me">     <a href="http://nytimes.com"        rel="dc:creator"></a>    <a href="http://payment.com/document"        rel="foaf:tipjar"></a>    <a href="mailto:evan@nytimes.com"        rel="foaf:mbox"></a></span><span xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#"      about="http://payment.com/document"     typeof="pmt:Document">     <a href="http://payment.com/document#mypaypalaccount"        rel="pmt:hasPaymentMethod"></a></span><span xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#"      about="http://payment.com/document#mypaypalaccount"     typeof="pmt:PayPal">    <a href="mailto:evan@paypal.com"       rel="pmt:username"></span>
+<span xmlns:dc="http://purl.org/dc/elements/1.1/"      xmlns:foaf="http://xmlns.com/foaf/0.1/"      xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#"      about="http://evansandhaus.com/#me">     <a href="http://nytimes.com"        rel="dc:creator"></a>
+    <a href="http://nytimes.com"        rel="dc:creator"></a>    <meta property="rdfs:label" content="Evan Sandhaus" /></span><span xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#"      about="http://payment.com/document"     typeof="pmt:Document">     <a href="http://payment.com/document#mypaypalaccount"        rel="pmt:hasPaymentMethod"></a></span><span xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#"      about="http://payment.com/document#mypaypalaccount"     typeof="pmt:PayPal">    <a href="mailto:evan@paypal.com"       rel="pmt:username"></span>
