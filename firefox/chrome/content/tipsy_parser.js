@@ -10,9 +10,8 @@ var tipsy = {
         if(appcontent) {
             appcontent.addEventListener("DOMContentLoaded", tipsy.onPageLoad, true);
         }
-        alert('hi');
-        tipsy_init.db = create_tipsy_db();
-        tipsy_init.db.opendb();
+        tipsy.db = create_tipsy_db();
+        tipsy.db.opendb();
     },
     onPageLoad: function(aEvent) {
         var doc = aEvent.originalTarget;
@@ -27,9 +26,8 @@ var tipsy = {
                  .where('?doc pmt:hasPaymentMethod ?method')
                  .where('?creator dc:creator ?site')
                  .each(function(){
-                    //Populate the stuff in the sqlite db
-                    alert('Method = '+ this.method.value + '\nSite = '+this.site.value+'\nCreator = '+this.creator.value+'\nUsername = '+this.username.value +"\nDoc = "+ this.doc.value);
-                    alert('parsed');
+                    //alert('Method = '+ this.method.value + '\nSite = '+this.site.value+'\nCreator = '+this.creator.value+'\nUsername = '+this.username.value +"\nDoc = "+ this.doc.value);
+                    tipsy.db.visit(this.site.value, this.creator.value, this.username.value, this.doc.value);
                  });
         }
     },
