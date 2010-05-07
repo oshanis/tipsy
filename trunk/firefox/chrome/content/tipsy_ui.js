@@ -8,7 +8,25 @@ clearHistory = function(){
 }
 
 testAddValues = function(){
-    alert("Testing the addition of new values");
+    
+    var website_history = document.getElementById("website_history");
+    var website_listitem = document.createElement("listitem");
+    
+    var website_item1 = document.createElement("listcell");
+    website_item1.appendChild(document.createTextNode("1"));
+    var website_item2 = document.createElement("listcell");
+    website_item2.appendChild(document.createTextNode("2"));
+    var website_item3 = document.createElement("listcell");
+    website_item3.appendChild(document.createTextNode("1"));
+    
+    website_listitem.appendChild(website_item1);
+    website_listitem.appendChild(website_item2);
+    website_listitem.appendChild(website_item3);
+    
+    website_history.appendChild(website_listitem);
+    
+    document.appendChild(website_listitem);
+    
 }
 
 /** This function should validate the number of sites the user wishes to select through the lottery process
