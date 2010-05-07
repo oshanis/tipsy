@@ -50,7 +50,7 @@
 	  </hbox>
 
         <hbox>
-           <button oncommand="testAddValues()" align="center"><label width="10">Clear History</label></button>
+           <button oncommand="testAddValues()" align="center"><label width="10">Test Add Values</label></button>
            <button oncommand="clearHistory()" align="center"><label width="10">Clear History</label></button>
        </hbox>
    </groupbox>
