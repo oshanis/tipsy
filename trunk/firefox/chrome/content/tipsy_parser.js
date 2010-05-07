@@ -1,3 +1,8 @@
+//Have to set the correct context for Jquery to pick things up
+jQuery.noConflict();
+$ = function(selector,context){ return new jQuery.fn.init(selector,context||window.content.document); };
+$.fn = $.prototype = jQuery.fn;
+
 var tipsy = {
     test : function() {
         alert('yay');
@@ -15,16 +20,8 @@ var tipsy_init = {
     },
     onPageLoad: function(aEvent) {
         var doc = aEvent.originalTarget;
-        /*alert(doc.location);
-        doc.test = 'yoooo';
-        doc.tipsy = tipsy;
-        doc.defaultView.test = 'yooo';
-        alert(doc.test);
-        */
         if (doc instanceof HTMLDocument){
-	  
-
-            //Try to parse the RDFa out of the HTML anyway
+            //Try to parse the RDFa out of the HTML
             var rdf = $('#tipsy')
                  .rdf()
                  .prefix('pmt','http://tipsy.googlecode.com/svn/trunk/vocab/pmt#')
@@ -35,9 +32,8 @@ var tipsy_init = {
                  .where('?creator dc:creator ?site')
                  .each(function(){
                     //Populate the stuff in the sqlite db
-                    ('#list').append('Site = '+this.site.value+'<br/>Creator = '+this.creator.value+'<br/>Username = '+this.username.value);
+                    alert('Method = '+ this.method.value + '\nSite = '+this.site.value+'\nCreator = '+this.creator.value+'\nUsername = '+this.username.value +"\nDoc = "+ this.doc.value);
                  });
-
         }
     },
 };
