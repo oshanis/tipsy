@@ -4,14 +4,6 @@ $ = function(selector,context){ return new jQuery.fn.init(selector,context||wind
 $.fn = $.prototype = jQuery.fn;
 
 var tipsy = {
-    test : function() {
-        alert('yay');
-    },
-    parseDomElement : function(selectorId){
-    },
-};
-
-var tipsy_init = {
     init: function() {
         var appcontent = document.getElementById("appcontent");
         if(appcontent) {
@@ -37,4 +29,4 @@ var tipsy_init = {
         }
     },
 };
-window.addEventListener("load", tipsy_init.init , false);
+window.addEventListener("load", tipsy.init , false);

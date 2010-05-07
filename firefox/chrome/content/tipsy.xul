@@ -23,8 +23,35 @@
            <label value="Activity Panel" />
 	   <!-- add nifty graph visualizations of sites visited and sites the user liked. Slider to select time frame. -->
         </hbox>
+
+        <hbox pack="center">
+	  <listbox id="website_history">
+	    <listhead>
+	      <listheader>Web Site</listheader>
+	      <listheader>Last Access</listheader>
+	      <listheader>Frequency of Access</listheader>
+	    </listhead>
+	    <listcols>
+	      <listcol></listcol>
+	      <listcol></listcol>
+	      <listcol></listcol>
+	    </listcols>
+	    <listitem>
+	      <listcell>nytimes.com</listcell>
+	      <listcell>2010/5/7</listcell>
+	      <listcell>10</listcell>
+	    </listitem>
+	    <listitem>
+	      <listcell>cnn.com</listcell>
+	      <listcell>2010/5/5</listcell>
+	      <listcell>20</listcell>
+	    </listitem>
+	  </listbox>
+	  </hbox>
+
         <hbox>
-           <button oncommand="clearHistory" align="center"><label width="10">Clear History</label></button>
+           <button oncommand="testAddValues()" align="center"><label width="10">Clear History</label></button>
+           <button oncommand="clearHistory()" align="center"><label width="10">Clear History</label></button>
        </hbox>
    </groupbox>
 
@@ -38,24 +65,24 @@
            <radiogroup flex="1">
        <label value="How frequently do you want to run the election?"/>
        <radio label="Once a week"   
-              oncommand="validateFrequency" />
+              oncommand="validateFrequency()" />
        <radio label="Once every two weeks"   
-              oncommand="validateFrequency" />
+              oncommand="validateFrequency()" />
        <radio label="Once a month" selected="true"
-              oncommand="validateFrequency" />
+              oncommand="validateFrequency()" />
        <radio label="Once every two months"   
-              oncommand="validateFrequency" />
+              oncommand="validateFrequency()" />
        <radio label="Once every six months"   
-              oncommand="validateFrequency" />
+              oncommand="validateFrequency()" />
 
         </radiogroup>
 
         </hbox>
         <hbox>
-           <label value="Your PayPal Account:" /> <textbox oninput="changePayPalAccount" />               
+           <label value="Your PayPal Account:" /> <textbox oninput="changePayPalAccount()" />               
         </hbox>
          <hbox>
-           <button oncommand="updateInfo"><label width="20">Save Information</label></button>
+           <button oncommand="updateInfo()"><label width="20">Save Information</label></button>
        </hbox>
    </groupbox>
 

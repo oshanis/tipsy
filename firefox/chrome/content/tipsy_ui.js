@@ -3,8 +3,12 @@
 */
 
 /** Clears the tipsy history containing the sites visited by the user, and sites liked by the user**/
-function clearHistory(){
+clearHistory = function(){
     alert("clearHistory: Not Implemented!");
+}
+
+testAddValues = function(){
+    alert("Testing the addition of new values");
 }
 
 /** This function should validate the number of sites the user wishes to select through the lottery process
