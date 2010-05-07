@@ -22,6 +22,8 @@ var tipsy_init = {
         alert(doc.test);
         */
         if (doc instanceof HTMLDocument){
+	  
+
             //Try to parse the RDFa out of the HTML anyway
             var rdf = $('#tipsy')
                  .rdf()
@@ -33,7 +35,7 @@ var tipsy_init = {
                  .where('?creator dc:creator ?site')
                  .each(function(){
                     //Populate the stuff in the sqlite db
-                    //$('#list').append('Site = '+this.site.value+'<br/>Creator = '+this.creator.value+'<br/>Username = '+this.username.value);
+                    ('#list').append('Site = '+this.site.value+'<br/>Creator = '+this.creator.value+'<br/>Username = '+this.username.value);
                  });
 
         }
