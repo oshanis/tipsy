@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+  <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+     $(document).ready(function(){
+     alert($("#tipsy:tipsy").text());
+   });
+</script>
+</head>
+
+
+<body>
+View Source to see the RDFa embedded in this page. On page load it
+will be parsed as long as the RDFa is embedded in a element with an id
+called "tipsy".
+
+<!-- The following "invisible" snippet is to be embedded in the web -->
+<!-- pages -->
+<div id="tipsy:tipsy">Random Text</div>
+
+<span  xmlns:tipsy="http://example.com">
+<span id="tipsy:tipsy">
+<span xmlns:dc="http://purl.org/dc/elements/1.1/" 
+     xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+     xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#" 
+     about="http://evansandhaus.com/#me"> 
+    <a href="http://nytimes.com" 
+       rel="dc:creator"></a>
+    <a href="http://nytimes.com" 
+       rel="dc:creator"></a>
+    <meta property="rdfs:label" content="Evan Sandhaus" />
+</span>
+
+<span xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#" 
+     about="http://payment.com/document"
+     typeof="pmt:Document"> 
+    <a href="http://payment.com/document#mypaypalaccount" 
+       rel="pmt:hasPaymentMethod"></a>
+</span>
+
+<span xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#" 
+     about="http://payment.com/document#mypaypalaccount"
+     typeof="pmt:PayPal">
+    <a href="mailto:evan@paypal.com"
+       rel="pmt:username">
+</span>
+
+</span>
+
+</body> </html>
