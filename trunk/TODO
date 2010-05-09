@@ -6,3 +6,12 @@ website:
 plugin:
   figure out why you don't get to modify window.X or document.X in the
     tipsy_parser.js code
+
+  To get the resizing of the sidebar to work:
+  The following CSS code must be included in the userChrome.css inside the chrome dir of the firefox user profile:
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+#sidebar {max-width: none !important; }
+
+  Find out if there is anyway we can change this css file from within the plugin.
+
