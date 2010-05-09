@@ -6,9 +6,15 @@
 <page id="sbTipsy" 
       title="&tipsy.title;"
       xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-
-<!-- Include Javascript -->
-<script src="tipsy_ui.js" type="text/javascript"></script>
+      <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.core.min-1.0.js" type="text/javascript"></script>
+      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rdfa.min-1.0.js" type="text/javascript"></script>
+      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rules.min-1.0.js" type="text/javascript"></script>
+      <script src="http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js" type="text/javascript"></script>
+      <script src="log.js" type="text/javascript"></script>
+      <script src="db.js" type="text/javascript"></script>
+      <script src="tipsy_parser.js" type="text/javascript"></script>
+      <script src="tipsy_ui.js" type="text/javascript"></script>
 
   <tabbox  flex="1">
     <tabs >
@@ -28,24 +34,19 @@
 	  <listbox id="website_history">
 	    <listhead>
 	      <listheader>Web Site</listheader>
-	      <listheader>Last Access</listheader>
-	      <listheader>Frequency of Access</listheader>
+	      <listheader>Creator</listheader>
+	      <listheader>Username</listheader>
+	      <listheader>Page URL</listheader>
+	      <listheader>Datetime</listheader>
 	    </listhead>
 	    <listcols>
 	      <listcol></listcol>
 	      <listcol></listcol>
 	      <listcol></listcol>
+	      <listcol></listcol>
+	      <listcol></listcol>
 	    </listcols>
-	    <listitem>
-	      <listcell>nytimes.com</listcell>
-	      <listcell>2010/5/7</listcell>
-	      <listcell>10</listcell>
-	    </listitem>
-	    <listitem>
-	      <listcell>cnn.com</listcell>
-	      <listcell>2010/5/5</listcell>
-	      <listcell>20</listcell>
-	    </listitem>
+	    
 	  </listbox>
 	  </hbox>
 

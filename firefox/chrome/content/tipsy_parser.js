@@ -4,14 +4,15 @@ $ = function(selector,context){ return new jQuery.fn.init(selector,context||wind
 $.fn = $.prototype = jQuery.fn;
 
 var tipsy = {
+
     db: null,
+
     init: function() {
+        
         var appcontent = document.getElementById("appcontent");
         if(appcontent) {
             appcontent.addEventListener("DOMContentLoaded", tipsy.onPageLoad, true);
         }
-        tipsy.db = create_tipsy_db();
-        tipsy.db.opendb();
     },
     onPageLoad: function(aEvent) {
         var doc = aEvent.originalTarget;
@@ -26,10 +27,17 @@ var tipsy = {
                  .where('?doc pmt:hasPaymentMethod ?method')
                  .where('?creator dc:creator ?site')
                  .each(function(){
-                    //alert('Method = '+ this.method.value + '\nSite = '+this.site.value+'\nCreator = '+this.creator.value+'\nUsername = '+this.username.value +"\nDoc = "+ this.doc.value);
+                    log('Parsed the following out of the rdfa\nMethod = '+ this.method.value + '\nSite = '+this.site.value+'\nCreator = '+this.creator.value+'\nUsername = '+this.username.value +"\nDoc = "+ this.doc.value);
                     tipsy.db.visit(this.site.value, this.creator.value, this.username.value, this.doc.value);
                  });
         }
+        
     },
+    
 };
+
+//Create and open the tipsy db (Note: Moved this out of the init method because, we would like to have the db before the document content is loaded)
+tipsy.db = create_tipsy_db();
+tipsy.db.opendb();
+
 window.addEventListener("load", tipsy.init , false);

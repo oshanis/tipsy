@@ -1,6 +1,55 @@
 /**
 * All the UI Interaction code goes here.
+* refer to: https://developer.mozilla.org/en/Code_snippets/Sidebar if strange UI behavior is encountered
 */
+
+
+var sidebar = top.document.getElementById("sidebar");
+sidebar.contentWindow.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        var visits = tipsy.db.getvisits();
+        var document = sidebar.contentDocument;
+        
+        while (visits.executeStep()) {
+            var website_history = document.getElementById("website_history");
+            var website_listitem = document.createElement("listitem");
+            
+            var website = document.createElement("listcell");
+            website.appendChild(document.createTextNode(visits.row.site));
+            var creator = document.createElement("listcell");
+            creator.appendChild(document.createTextNode(visits.row.creator));
+            var username = document.createElement("listcell");
+            username.appendChild(document.createTextNode(visits.row.username));
+            var pageurl = document.createElement("listcell");
+            pageurl.appendChild(document.createTextNode(visits.row.pageurl));
+            var datetime = document.createElement("listcell");
+            datetime.appendChild(document.createTextNode(visits.row.datetime));
+        
+            try{
+                website_listitem.appendChild(website);
+                website_listitem.appendChild(creator);
+                website_listitem.appendChild(username);
+                website_listitem.appendChild(pageurl);
+                website_listitem.appendChild(datetime);
+
+                website_history.appendChild(website_listitem);
+
+                document.appendChild(website_listitem);
+            }
+            catch(e){
+                log("Tried to add " +visits.row.site + " , " + visits.row.creator +  " , " + 
+                    visits.row.username +  " , " + visits.row.pageurl +  " , " + visits.row.datetime +
+                    " in the UI. But encountered the following error: ");
+                log(e);
+                
+            }
+        }
+    }, 
+    false);
+  
+
 
 /** Clears the tipsy history containing the sites visited by the user, and sites liked by the user**/
 clearHistory = function(){
