@@ -5,77 +5,76 @@
 
 
 var sidebar = top.document.getElementById("sidebar");
-sidebar.contentWindow.addEventListener(
-    "DOMContentLoaded",
-    function(){
-
-        var visits = tipsy.db.getvisits();
-        var document = sidebar.contentDocument;
-        
-        while (visits.executeStep()) {
-            var website_history = document.getElementById("website_history");
-            var website_listitem = document.createElement("listitem");
             
-            var website = document.createElement("listcell");
-            website.appendChild(document.createTextNode(visits.row.site));
-            var creator = document.createElement("listcell");
-            creator.appendChild(document.createTextNode(visits.row.creator));
-            var username = document.createElement("listcell");
-            username.appendChild(document.createTextNode(visits.row.username));
-            var pageurl = document.createElement("listcell");
-            pageurl.appendChild(document.createTextNode(visits.row.pageurl));
-            var datetime = document.createElement("listcell");
-            datetime.appendChild(document.createTextNode(visits.row.datetime));
+refreshTable = function(){
+    
+    var visits = tipsy.db.getvisits();
+    var sidebar_document = sidebar.contentDocument;
+    var website_history = sidebar_document.getElementById("website_history");
+    
+    //Clear the contents of the table
+    //@@TODO: this will be wasteful if there are millions of entries, and you would 
+    //only need to add one entry to the table
+    while(  website_history.hasChildNodes()){
+        website_history.removeChild(website_history.firstChild);
+    }
+    //After flushing all the content, add the headers.
+    /*var headers = sidebar_document.createElement("listhead");
+    headers.appendChild(sidebar_document.createElement("listheader").appendChild(sidebar_document.createTextNode("Web Site")));
+    headers.appendChild(sidebar_document.createElement("listheader").appendChild(sidebar_document.createTextNode("Creator")));
+    headers.appendChild(sidebar_document.createElement("listheader").appendChild(sidebar_document.createTextNode("Username")));
+    headers.appendChild(sidebar_document.createElement("listheader").appendChild(sidebar_document.createTextNode("Page URL")));
+    headers.appendChild(sidebar_document.createElement("listheader").appendChild(sidebar_document.createTextNode("Datetime")));
+    
+    var columns = sidebar_document.createElement("listcols");
+    for (var i=0; i<5; i++)
+        columns.appendChild(sidebar_document.createElement("listCol"));
+    
+    website_history.appendChild(headers);
+    website_history.appendChild(columns);
+    */
+    
+    while (visits.executeStep()) {
+        var website_listitem = sidebar_document.createElement("listitem");
         
-            try{
-                website_listitem.appendChild(website);
-                website_listitem.appendChild(creator);
-                website_listitem.appendChild(username);
-                website_listitem.appendChild(pageurl);
-                website_listitem.appendChild(datetime);
+        var website = sidebar_document.createElement("listcell");
+        website.appendChild(sidebar_document.createTextNode(visits.row.site));
+        var creator = sidebar_document.createElement("listcell");
+        creator.appendChild(sidebar_document.createTextNode(visits.row.creator));
+        var username = sidebar_document.createElement("listcell");
+        username.appendChild(sidebar_document.createTextNode(visits.row.username));
+        var pageurl = sidebar_document.createElement("listcell");
+        pageurl.appendChild(sidebar_document.createTextNode(visits.row.pageurl));
+        var datetime = sidebar_document.createElement("listcell");
+        datetime.appendChild(sidebar_document.createTextNode(visits.row.datetime));
+    
+        try{
+            website_listitem.appendChild(website);
+            website_listitem.appendChild(creator);
+            website_listitem.appendChild(username);
+            website_listitem.appendChild(pageurl);
+            website_listitem.appendChild(datetime);
 
-                website_history.appendChild(website_listitem);
+            website_history.appendChild(website_listitem);
 
-                document.appendChild(website_listitem);
-            }
-            catch(e){
-                log("Tried to add " +visits.row.site + " , " + visits.row.creator +  " , " + 
-                    visits.row.username +  " , " + visits.row.pageurl +  " , " + visits.row.datetime +
-                    " in the UI. But encountered the following error: ");
-                log(e);
-                
-            }
+            sidebar_document.appendChild(website_listitem);
         }
-    }, 
-    false);
+        catch(e){
+            log("Tried to add " +visits.row.site + " , " + visits.row.creator +  " , " + 
+                visits.row.username +  " , " + visits.row.pageurl +  " , " + visits.row.datetime +
+                " in the UI. But encountered the following error: ");
+            log(e);
+            
+        }
+    }
+    
+}
+
+sidebar.contentWindow.addEventListener( "DOMContentLoaded", refreshTable, false);
   
-
-
 /** Clears the tipsy history containing the sites visited by the user, and sites liked by the user**/
 clearHistory = function(){
     alert("clearHistory: Not Implemented!");
-}
-
-testAddValues = function(){
-    
-    var website_history = document.getElementById("website_history");
-    var website_listitem = document.createElement("listitem");
-    
-    var website_item1 = document.createElement("listcell");
-    website_item1.appendChild(document.createTextNode("1"));
-    var website_item2 = document.createElement("listcell");
-    website_item2.appendChild(document.createTextNode("2"));
-    var website_item3 = document.createElement("listcell");
-    website_item3.appendChild(document.createTextNode("1"));
-    
-    website_listitem.appendChild(website_item1);
-    website_listitem.appendChild(website_item2);
-    website_listitem.appendChild(website_item3);
-    
-    website_history.appendChild(website_listitem);
-    
-    document.appendChild(website_listitem);
-    
 }
 
 /** This function should validate the number of sites the user wishes to select through the lottery process
