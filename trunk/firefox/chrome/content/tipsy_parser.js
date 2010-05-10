@@ -8,8 +8,7 @@ var tipsy = {
     db: null,
 
     init: function() {
-        
-        var appcontent = document.getElementById("appcontent");
+        var appcontent = top.document.getElementById("appcontent");
         if(appcontent) {
             appcontent.addEventListener("DOMContentLoaded", tipsy.onPageLoad, true);
         }
