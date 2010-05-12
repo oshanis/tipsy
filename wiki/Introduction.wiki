@@ -1,7 +1,7 @@
-= What is Tipsy? =
+=== What is Tipsy? ===
 
-= How does it work? =
+=== How does it work? ===
 
-= What technology is behind tipsy? =
+=== What technology is behind tipsy? ===
 
-= How can I get help? =
+=== How can I get help? ===
