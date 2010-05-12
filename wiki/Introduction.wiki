@@ -1,6 +1,10 @@
 === What is Tipsy? ===
 
+Tipsy is a project that attempts to provide easy web page licensing and patronage.
+
 === How does it work? ===
+
+Website creators will embed an XHTML snippet with some RDFa in it on their web page that specifies some metadata. This include things like the page url, the creator of page, the way they would like to get paid, their PayPal user account.
 
 === What technology is behind tipsy? ===
 
