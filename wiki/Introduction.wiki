@@ -4,4 +4,4 @@
 
 = What technology is behind tipsy? =
 
-= How can I get helo? =
+= How can I get help? =
