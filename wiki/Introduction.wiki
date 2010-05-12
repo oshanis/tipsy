@@ -1,13 +1,7 @@
-#Introduction to tipsy.
-
 = What is Tipsy? =
 
 = How does it work? =
 
+= What technology is behind tipsy? =
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= How can I get helo? =
