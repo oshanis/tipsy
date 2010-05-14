@@ -6,4 +6,4 @@ For example, I might simply wish to say "Once per month, send my log and $5 to `
 
 From here, we need:
   * A serialization format for the log.  JSON sound good?  What data should we be sending?
-  * A wire protocol for delivering the serialized log.  HTTP POST sound good?  Should we require https?  I can think of three fields: [log_payload, paypal_account, confirmation_email_address]
+  * A wire protocol for delivering the serialized log.  HTTP POST sound good?  Should we require https?  I can think of three fields: `[log_payload, paypal_account, confirmation_email_address]`
