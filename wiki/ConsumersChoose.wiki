@@ -1,4 +1,4 @@
-# A VRM model for more than just collecting donations: how consumers can choose who to pay.
+= A VRM model for more than just collecting donations: how consumers can choose who to pay =
 
 Currently, Website creators can embed an XHTML snippet with some RDFa on their web page that specifies the site url, the creator of page, the way they would like to get paid, and their PayPal user account.  A tipsy browser-side plugin finds these annotations on each page it visits, and records the visit in a log.
 
