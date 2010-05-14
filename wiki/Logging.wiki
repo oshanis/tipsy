@@ -1,0 +1,9 @@
+The tipsy log is currently stored in sqlite in the client browser.  The only action tipsy can take on behalf of the consumer is to run a periodic lottery, randomly instructing the consumer to pay the winning site owner using PayPal.  In keeping with the [http://cyber.law.harvard.edu/projectvrm/EmanciPay EmanciPay] model, we hope to provide the consumer with more options for how to account for the sites they visit.
+
+To do this, we must standardize an export format for the log, and a protocol by which to deliver the log to a trusted party.  While the standard lottery model will be one option for the consumer, they can also elect a fourth-party service to take their log, and a payment periodically, and trust the fourth-party to distribute their payment according to some policy.
+
+For example, I might simply wish to say "Once per month, send my log and $5 to https://smoothingfunction.com."  `https://smoothingfunction.com` is a fictional service whose policy is to take all of my tipsy visits, divide $5 amongst them, and distribute a payment to each vendor once their aggregate balance across all consumers reaches $10.  Another fictional service, `https://emancipay.redcross.org` might distribute 95% of my money to the vendors, and keep 5% as a donation.  Other services might provide tight friend networks an opportunity to see what their friends are browsing in addition to distributing money.
+
+From here, we need:
+  * A serialization format for the log.  json sound good?
+  * A wire protocol for delivering the serialized log.  HTTP POST sound good?
