@@ -2,7 +2,8 @@
 
 Currently, Website creators can embed an XHTML snippet with some RDFa on their web page that specifies the site url, the creator of page, the way they would like to get paid, and their PayPal user account.  A tipsy browser-side plugin finds these annotations on each page it visits, and records the visit in a log.
 
-In following the Emancipay model, we could provide the vendor and consumer more choice.  Vendors can denote some set of rules they promise to follow in their RDFa snippet, including:
+In following the Emancipay model, we could provide the vendor and consumer more choices.  Vendors can denote some set of rules they promise to follow in their RDFa snippet, including:
+  * Creative Commons Licenses
   * Commercial?
   * Display ads?
   * Collect personally-identifiable data?
