@@ -1,6 +1,6 @@
 === What is Tipsy? ===
 
-Tipsy is a project that attempts to provide an easy way to pay web page creators on the web.
+Tipsy is a project that attempts to provide an easy way to pay people who contribute great things on the web.
 
 === How does it work? ===
 
