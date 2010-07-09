@@ -1,4 +1,8 @@
 content	tipsy	chrome/content/
 locale	tipsy	en-US	chrome/locale/en-US/
 skin	tipsy	classic/1.0	chrome/skin/
-overlay	chrome://browser/content/browser.xul	chrome://tipsy/content/firefoxOverlay.xul
+
+style chrome://global/content/customizeToolbar.xul chrome://tipsy/content/button.css
+
+# Firefox
+overlay chrome://browser/content/browser.xul chrome://tipsy/content/firefoxOverlay.xul
