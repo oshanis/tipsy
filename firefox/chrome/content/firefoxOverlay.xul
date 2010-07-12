@@ -4,6 +4,27 @@
 <overlay id="tipsyOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   
+  
+<!-- Firefox -->
+<toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="customer-button"/>
+    <toolbarbutton id="vendor-button"/>
+  </toolbarpalette>
+
+  <!-- button details -->
+<toolbarbutton id="customer-button"
+  label="Me"
+  tooltiptext="Click this button to toggle client-side activity"
+  oncommand="customerbuttonjs[1]()"
+  class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
+  />
+<toolbarbutton id="vendor-button"
+  label="Site"
+  tooltiptext="Click this button to toggle vendor-side activity"
+  oncommand="vendorbuttonjs[1]()"
+  class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
+  />
+  
   <menupopup id="viewSidebarMenu">
     <menuitem key="key_openTipsy" observes="viewTipsy"  />
   </menupopup>
@@ -24,4 +45,8 @@
                  sidebartitle="&tipsy.title;"
                  oncommand="toggleSidebar('viewTipsy');" />
   </broadcasterset>
+  
+  <script type="application/javascript"
+  src="chrome://tipsy/content/button.js"/>
+
 </overlay>
