@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="chrome://tipsy/content/button.css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://tipsy/locale/tipsy.dtd">
 <overlay id="tipsyOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   
-  
-<!-- Firefox -->
-<toolbarpalette id="BrowserToolbarPalette">
-    <toolbarbutton id="customer-button"/>
-    <toolbarbutton id="vendor-button"/>
-  </toolbarpalette>
+  <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
 
-  <!-- button details -->
-<toolbarbutton id="customer-button"
-  label="Me"
-  tooltiptext="Click this button to toggle client-side activity"
-  oncommand="customerbuttonjs[1]()"
-  class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-  />
-<toolbarbutton id="vendor-button"
-  label="Site"
-  tooltiptext="Click this button to toggle vendor-side activity"
-  oncommand="vendorbuttonjs[1]()"
-  class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-  />
+
+<!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
+Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
+<toolbox id="navigator-toolbox">
+  <toolbar id="tipsy-toolbar" toolbarname="Tipsy Toolbar" accesskey="T"
+         class="chromeclass-toolbar" context="toolbar-context-menu"
+         hidden="false" persist="hidden">
+    <toolbarbutton id="customer-button"
+		   tooltiptext="Click this button to toggle client-side activity"
+		   oncommand="customerbuttonjs[1]()"
+		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"/>
+    <toolbarbutton id="vendor-button"
+		   tooltiptext="Click this button to toggle vendor-side activity"
+		   oncommand="vendorbuttonjs[1]()"
+		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"/>
+  </toolbar>
+</toolbox>
   
   <menupopup id="viewSidebarMenu">
     <menuitem key="key_openTipsy" observes="viewTipsy"  />
@@ -46,7 +46,5 @@
                  oncommand="toggleSidebar('viewTipsy');" />
   </broadcasterset>
   
-  <script type="application/javascript"
-  src="chrome://tipsy/content/button.js"/>
 
 </overlay>
