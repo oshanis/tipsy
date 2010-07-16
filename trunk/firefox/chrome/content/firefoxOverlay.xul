@@ -11,17 +11,17 @@
 <!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
 Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
 <toolbox id="navigator-toolbox">
-  <toolbar id="tipsy-toolbar" toolbarname="Tipsy Toolbar" accesskey="T"
-         class="chromeclass-toolbar" context="toolbar-context-menu"
-         hidden="false" persist="hidden">
-    <toolbarbutton id="customer-button"
+  <toolbar id="nav-bar">
+      <toolbarbutton id="customer-button"
 		   tooltiptext="Click this button to toggle client-side activity"
 		   oncommand="customerbuttonjs[1]()"
-		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"/>
-    <toolbarbutton id="vendor-button"
+		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
+		   insertbefore="urlbar-container"/>
+      <toolbarbutton id="vendor-button"
 		   tooltiptext="Click this button to toggle vendor-side activity"
 		   oncommand="vendorbuttonjs[1]()"
-		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"/>
+		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
+		   insertbefore="urlbar-container"/>
   </toolbar>
 </toolbox>
   
