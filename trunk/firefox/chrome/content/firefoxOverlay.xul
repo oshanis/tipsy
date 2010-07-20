@@ -12,6 +12,7 @@
 Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
 <toolbox id="navigator-toolbox">
   <toolbar id="nav-bar">
+  
       <toolbarbutton id="customer-button"
 		   tooltiptext="Click this button to toggle client-side activity"
 		   oncommand="customerbuttonjs[1]()"
@@ -24,7 +25,40 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 		   insertbefore="urlbar-container"/>
   </toolbar>
 </toolbox>
-  
+
+<!--temp adding an additional toolbar to show sharing functionaility to be removed once this can be implemented in the r-buttons in the menu pane-->
+   <toolbox id="navigator-toolbox">
+    
+        <toolbar id="tipsy-Toolbar" toolbarname="Tipsy Toolbar" accesskey="T"
+                 class="chromeclass-toolbar" context="toolbar-context-menu" 
+                 hidden="false" persist="hidden">
+                 
+							<toolbaritem flex="0">
+					<toolbarbutton id="xtra-vendor-button" type="menu"
+                               tooltiptext="Click to configue settings for the vendor">
+                    <menupopup>
+						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
+								  
+					<menuseparator />
+					    
+						<menuitem id="twitter-menuitem" class="menuitem-iconic" label="Twitter"/>
+						<menuitem id="facebook-menuitem" class="menuitem-iconic" label="Facebook"/>
+						<menuitem id="linkedin-menuitem" class="menuitem-iconic" label="LinkedIn"/>
+						<menuitem id="stumbleupon-menuitem" class="menuitem-iconic" label="StumbleUpon"/>
+						
+					<menuseparator />
+					
+						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle"/>	
+						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS"/>
+						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo"/>
+                    </menupopup>
+                </toolbarbutton>
+            </toolbaritem>
+
+		</toolbar>
+	</toolbox>	
+		
+		
   <menupopup id="viewSidebarMenu">
     <menuitem key="key_openTipsy" observes="viewTipsy"  />
   </menupopup>
