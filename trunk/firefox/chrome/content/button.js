@@ -4,7 +4,7 @@ customerbuttonjs = {
 
   /*alert("No JavaScript functionaility has been implemented yet - Ahmad")	*/
   /*var statement = dbConn.createStatement("SELECT * FROM tipsy.sqlite");*/
-  alert("test")
+  alert("No JavaScript functionaility has been implemented yet - Ahmad")
   },
 
 }
