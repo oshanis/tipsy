@@ -16,7 +16,7 @@
   {-moz-image-region: rect(24px 40px 40px 24px);}
   
 #vendor-button,
-#wrapper-customer-button
+#wrapper-vendor-button
   {list-style-image: url("chrome://tipsy/skin/vendor-button.png");}
 
 /* common style for all custom buttons */
@@ -32,10 +32,7 @@
 [iconsize="small"] .tipsy :hover
   {-moz-image-region: rect(24px 40px 40px 24px);}
   
-#xtra-vendor-button {
-    list-style-image: url("chrome://tipsy/skin/xtra_vendor_button.png");
-}
-  
+
 #twitter-menuitem{
     list-style-image: url("chrome://tipsy/skin/twitter.png");
 }

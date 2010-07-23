@@ -18,25 +18,12 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 		   oncommand="customerbuttonjs[1]()"
 		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 		   insertbefore="urlbar-container"/>
-      <toolbarbutton id="vendor-button"
-		   tooltiptext="Click this button to toggle vendor-side activity"
-		   oncommand="vendorbuttonjs[1]()"
-		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-		   insertbefore="urlbar-container"/>
-  </toolbar>
-</toolbox>
-
-<!--temp adding an additional toolbar to show sharing functionaility to be removed once this can be implemented in the r-buttons in the menu pane-->
-   <toolbox id="navigator-toolbox">
-    
-        <toolbar id="tipsy-Toolbar" toolbarname="Tipsy Toolbar" accesskey="T"
-                 class="chromeclass-toolbar" context="toolbar-context-menu" 
-                 hidden="false" persist="hidden">
-                 
-							<toolbaritem flex="0">
-					<toolbarbutton id="xtra-vendor-button" type="menu"
-                               tooltiptext="Click to configue settings for the vendor">
-                    <menupopup>
+		   
+	<toolbarbutton type="menu-button" id="vendor-button" label="Tipsy" 
+	tooltiptext="Click this button to toggle vendor-side activity" 
+	class="toolbarbutton-1 chromeclass-toolbar-additional tipsy" 
+	oncommand="vendorbuttonjs[1]()">
+		<menupopup>
 						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
 								  
 					<menuseparator />
@@ -51,14 +38,13 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle"/>	
 						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS"/>
 						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo"/>
-                    </menupopup>
-                </toolbarbutton>
-            </toolbaritem>
+		</menupopup>
+	</toolbarbutton>
 
-		</toolbar>
-	</toolbox>	
-		
-		
+  </toolbar>
+</toolbox>
+
+	
   <menupopup id="viewSidebarMenu">
     <menuitem key="key_openTipsy" observes="viewTipsy"  />
   </menupopup>
