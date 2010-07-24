@@ -21,23 +21,22 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 		   
 	<toolbarbutton type="menu-button" id="vendor-button" label="Tipsy" 
 	tooltiptext="Click this button to toggle vendor-side activity" 
-	class="toolbarbutton-1 chromeclass-toolbar-additional tipsy" 
-	oncommand="vendorbuttonjs[1]()">
+	class="toolbarbutton-1 chromeclass-toolbar-additional tipsy">
 		<menupopup>
 						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
 								  
 					<menuseparator />
 					    
-						<menuitem id="twitter-menuitem" class="menuitem-iconic" label="Twitter"/>
-						<menuitem id="facebook-menuitem" class="menuitem-iconic" label="Facebook"/>
-						<menuitem id="linkedin-menuitem" class="menuitem-iconic" label="LinkedIn"/>
-						<menuitem id="stumbleupon-menuitem" class="menuitem-iconic" label="StumbleUpon"/>
+						<menuitem id="twitter-menuitem" class="menuitem-iconic" label="Twitter" onclick="open_webpage('http://www.twitter.com/', event)"/>
+						<menuitem id="facebook-menuitem" class="menuitem-iconic" label="Facebook" onclick="open_webpage('http://www.facebook.com/', event)"/>
+						<menuitem id="linkedin-menuitem" class="menuitem-iconic" label="LinkedIn" onclick="open_webpage('http://www.linkedin.com/', event)"/>
+						<menuitem id="stumbleupon-menuitem" class="menuitem-iconic" label="StumbleUpon" onclick="open_webpage('http://www.stumbleupon.com/', event)"/>
 						
 					<menuseparator />
 					
-						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle"/>	
-						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS"/>
-						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo"/>
+						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle" onclick="open_webpage('http://www.google.com/ig/', event)"/>	
+						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS" />
+						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo" onclick="open_webpage('http://my.yahoo.com/', event)"/>
 		</menupopup>
 	</toolbarbutton>
 

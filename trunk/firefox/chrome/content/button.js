@@ -16,3 +16,13 @@ vendorbuttonjs = {
   },
 
 }
+
+function open_webpage(url, event) {
+   if (event.button == 0) {
+   gBrowser.selectedTab = gBrowser.addTab(url);
+
+   } else {
+    window._content.document.location = url;
+    window.content.focus();
+   }
+}
