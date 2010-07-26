@@ -64,6 +64,5 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
                  sidebartitle="&tipsy.title;"
                  oncommand="toggleSidebar('viewTipsy');" />
   </broadcasterset>
-  
 
 </overlay>
