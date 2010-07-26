@@ -6,3 +6,4 @@ style chrome://global/content/customizeToolbar.xul chrome://tipsy/content/button
 
 # Firefox
 overlay chrome://browser/content/browser.xul chrome://tipsy/content/firefoxOverlay.xul
+overlay chrome://browser/content/browser.xul chrome://tipsy/content/fuzz_overlay.xul
