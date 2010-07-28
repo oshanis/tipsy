@@ -2,7 +2,7 @@ customerbuttonjs = {
 
 1: function () {
 
-  /*alert("No JavaScript functionaility has been implemented yet - Ahmad")	*/
+  /*attempted to lift some data direct from the SQlite file but this did not work, thus commented out code below - Ahmad*/
   /*var statement = dbConn.createStatement("SELECT * FROM tipsy.sqlite");*/
   alert("No JavaScript functionaility has been implemented yet - Ahmad")
   },
