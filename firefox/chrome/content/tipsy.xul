@@ -25,12 +25,13 @@
 
    <!-- Activity Tab -->
      <groupbox>
-        <hbox pack="center">
+        <hbox pack="start">
            <label value="Activity Panel" />
 	   <!-- add nifty graph visualizations of sites visited and sites the user liked. Slider to select time frame. -->
-        </hbox>
-
-        <hbox pack="center">
+       
+		</hbox>
+		
+	        <hbox pack="center">
 	  <listbox id="website_history">
 	    <listhead>
 	      <listheader>Web Site</listheader>
@@ -85,6 +86,7 @@
          <hbox>
            <button oncommand="updateInfo()"><label width="20">Save Information</label></button>
        </hbox>
+
    </groupbox>
 
     </tabpanels>
