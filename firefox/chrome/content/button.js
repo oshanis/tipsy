@@ -4,18 +4,31 @@ customerbuttonjs = {
 
   /*attempted to lift some data direct from the SQlite file but this did not work, thus commented out code below - Ahmad*/
   /*var statement = dbConn.createStatement("SELECT * FROM tipsy.sqlite");*/
-  alert("No JavaScript functionaility has been implemented yet - Ahmad")
-  },
+  alert("No JavaScript functionaility has been implemented yet - Ahmad");
+  
+/*myWindow = window.open('','','resizable=yes,scrollbars=yes,width=100,height=100');
+myWindow .document.body.innerHTML = "<div>hello world!!</div>";*/
 
+}
 }
 
 vendorbuttonjs = {
 
-1: function () {
-  alert("No JavaScript functionaility has been implemented yet - Ahmad")	
-  },
 
+
+/*
+   // update the image and the label
+   if( ) 
+   {
+      statusImage.src = "chrome://tipsy/skin/vendor-button-no-rdfa.png";
+   }
+   else
+   {
+      statusImage.src = "chrome://tipsy/skin/vendor-button-active-rdfa.png";
+   }
+*/
 }
+
 
 function open_webpage(url, event) {
    if (event.button == 0) {

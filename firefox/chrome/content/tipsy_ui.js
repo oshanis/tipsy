@@ -77,6 +77,11 @@ clearHistory = function(){
     alert("clearHistory: Not Implemented!");
 }
 
+/** Tempoarary function to manully add data to the list**/
+myAppendItem = function(){
+	website_history.appendItem(testlabel, testvalue);
+}
+
 /** This function should validate the number of sites the user wishes to select through the lottery process
 Validate for high numbers like 99 and for non numbers**/
 function validateNumberOfSitesToPay(){

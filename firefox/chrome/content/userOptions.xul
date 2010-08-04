@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="chrome://tipsy/content/button.css"?>
+<?xml-stylesheet href="chrome://tipsy/skin/button.css" type="text/css"?>
+
+
+    <dialog id="user-options" title="Configure how vendors use your data"
+       xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+       buttons="accept,cancel"
+       buttonlabelcancel="Cancel"
+       buttonlabelaccept="Submit"   
+       ondialogaccept="submitDetails();"
+       ondialogcancel="window.close();">
+           
+       <script type="application/x-javascript"
+      src="submit.js"/>
+
+       <image id="image"/>
+
+        <groupbox>
+               
+          <radiogroup>
+             <radio id="mood" label="Zero" selected="true"/>
+               <radio id="mood" label="One"/>
+             <radio id="mood" label="Two"/>
+              <radio id="mood" label="Three"/>
+              <radio id="mood" label="Four"/>
+              <radio id="mood" label="Five"/>
+             <radio id="mood" label="Six"/>
+             <radio id="mood" label="Seven"/>
+              <radio id="mood" label="Eight"/>
+              <radio id="mood" label="Nine"/>
+              <radio id="mood" label="Ten"/>
+               <radio id="mood" label="Eleven"/>
+          </radiogroup>           
+       
+          <caption label="Please enter your mood"/>
+          <label value="Comment"/>
+          <textbox spellcheck="true" maxlength="100"/>
+       </groupbox>
+       
+       <script src="submit.js"/>
+    </dialog>
