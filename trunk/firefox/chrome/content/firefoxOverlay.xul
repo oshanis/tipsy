@@ -11,17 +11,20 @@
 <!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
 Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
 <toolbox id="navigator-toolbox">
+
   <toolbar id="nav-bar">
-  
-      <toolbarbutton id="customer-button"
-		   tooltiptext="Click this button to toggle client-side activity"
+
+    <toolbarbutton id="customer-button"
+		   tooltiptext="Me"
 		   oncommand="customerbuttonjs[1]()"
 		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-		   insertbefore="urlbar-container"/>
+		   insertbefore="urlbar-container">
+	</toolbarbutton>
 		   
-	<toolbarbutton type="menu-button" id="vendor-button" label="Tipsy" 
-	tooltiptext="Click this button to toggle vendor-side activity" 
-	class="toolbarbutton-1 chromeclass-toolbar-additional tipsy">
+	<toolbarbutton type="menu-button" id="vendor-button-no-rdfa" label="Tipsy" 
+			tooltiptext="Site" 
+			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
+			insertbefore="urlbar-container">
 		<menupopup>
 						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
 								  
@@ -38,9 +41,11 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS" />
 						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo" onclick="open_webpage('http://my.yahoo.com/', event)"/>
 		</menupopup>
+		
 	</toolbarbutton>
-
+		
   </toolbar>
+  
 </toolbox>
 
 	

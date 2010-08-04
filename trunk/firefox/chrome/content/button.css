@@ -1,38 +1,18 @@
-#customer-button,
-#wrapper-customer-button
-  {list-style-image: url("chrome://tipsy/skin/customer-button.png");}
-
-/* common style for all custom buttons */
-.tipsy                   
-  {-moz-image-region: rect( 0px 24px 24px  0px);}
-
-.tipsy :hover     
-  {-moz-image-region: rect(24px 24px 48px  0px);}
-
-[iconsize="small"] .tipsy 
-  {-moz-image-region: rect( 0px 40px 16px 24px);}
-
-[iconsize="small"] .tipsy :hover
-  {-moz-image-region: rect(24px 40px 40px 24px);}
+#customer-button{
+	list-style-image: url("chrome://tipsy/skin/customer-button.png");
+	
+}
   
-#vendor-button,
-#wrapper-vendor-button
-  {list-style-image: url("chrome://tipsy/skin/vendor-button.png");}
+#vendor-button-active-rdfa [disabled="true"]{
+list-style-image: url("chrome://tipsy/skin/vendor-button-active-rdfa.png");
 
-/* common style for all custom buttons */
-.tipsy                   
-  {-moz-image-region: rect( 0px 24px 24px  0px);}
+}
 
-.tipsy :hover     
-  {-moz-image-region: rect(24px 24px 48px  0px);}
+#vendor-button-no-rdfa{
+list-style-image: url("chrome://tipsy/skin/vendor-button-no-rdfa.png");
 
-[iconsize="small"] .tipsy 
-  {-moz-image-region: rect( 0px 40px 16px 24px);}
-
-[iconsize="small"] .tipsy :hover
-  {-moz-image-region: rect(24px 40px 40px 24px);}
+}
   
-
 #twitter-menuitem{
     list-style-image: url("chrome://tipsy/skin/twitter.png");
 }
