@@ -39,3 +39,7 @@ function open_webpage(url, event) {
     window.content.focus();
    }
 }
+
+function simplealert () {
+	alert("No JavaScript functionaility has been implemented yet - Ahmad");
+}

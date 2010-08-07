@@ -7,8 +7,18 @@
   
   <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
 
+   <!-- Adding a status bar panel for easier access to Tipsy Sidebar -->
+<statusbar id="status-bar">
+   <statusbarpanel class="statusbarpanel-iconic"
+	id="tipsy-status-bar"
+	onclick= "toggleSidebar('viewTipsy');"
+	src="chrome://tipsy/skin/statusbar.png"
+	tooltiptext="Click to access the Tipsy Sidebar"
+ />
+ </statusbar>
 
-<!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
+
+	<!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
 Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
 <toolbox id="navigator-toolbox">
 
