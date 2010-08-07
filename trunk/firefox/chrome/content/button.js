@@ -4,7 +4,7 @@ customerbuttonjs = {
 
   /*attempted to lift some data direct from the SQlite file but this did not work, thus commented out code below - Ahmad*/
   /*var statement = dbConn.createStatement("SELECT * FROM tipsy.sqlite");*/
-  alert("No JavaScript functionaility has been implemented yet - Ahmad");
+  /*alert("No JavaScript functionaility has been implemented yet - Ahmad");*/
   
 /*myWindow = window.open('','','resizable=yes,scrollbars=yes,width=100,height=100');
 myWindow .document.body.innerHTML = "<div>hello world!!</div>";*/
