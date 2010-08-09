@@ -1,9 +1,8 @@
 content	tipsy	chrome/content/
 locale	tipsy	en-US	chrome/locale/en-US/
 skin	tipsy	classic/1.0	chrome/skin/
-
-#The below line of code should be activated once we have a skin to accomodate for the Mac OS X
-#skin tipsy classic/1.0	chrome/skin//mac/    os=Darwin
+skin tipsy-os classic/1.0	chrome/skin/mac/    os=Darwin
+skin tipsy-os classic/1.0	chrome/skin/win/    os=WINNT
 
 style chrome://global/content/customizeToolbar.xul chrome://tipsy/content/button.css
 
