@@ -1,15 +1,15 @@
 #customer-button{
-	list-style-image: url("chrome://tipsy/skin/customer-button.png");
+	list-style-image: url("chrome://tipsy-os/skin/customer-button.png");
 	
 }
   
 #vendor-button-active-rdfa [disabled="true"]{
-list-style-image: url("chrome://tipsy/skin/vendor-button-active-rdfa.png");
+list-style-image: url("chrome://tipsy-os/skin/vendor-button-active-rdfa.png");
 
 }
 
 #vendor-button-no-rdfa{
-list-style-image: url("chrome://tipsy/skin/vendor-button-no-rdfa.png");
+list-style-image: url("chrome://tipsy-os/skin/vendor-button-no-rdfa.png");
 
 }
   
