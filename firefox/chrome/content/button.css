@@ -2,16 +2,16 @@
 	list-style-image: url("chrome://tipsy-os/skin/customer-button.png");
 	
 }
-  
-#vendor-button-active-rdfa [disabled="true"]{
-list-style-image: url("chrome://tipsy-os/skin/vendor-button-active-rdfa.png");
 
-}
-
-#vendor-button-no-rdfa{
+#vendor-button{
 list-style-image: url("chrome://tipsy-os/skin/vendor-button-no-rdfa.png");
 
 }
+
+/*#vendor-button-active-rdfa [disabled="true"]{
+list-style-image: url("chrome://tipsy-os/skin/vendor-button-active-rdfa.png");
+
+}*/
   
 #twitter-menuitem{
     list-style-image: url("chrome://tipsy/skin/twitter.png");

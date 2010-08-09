@@ -8,13 +8,14 @@ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 <!-- This code contains the icon and label on the options dialogue box  -->
 <prefpane id="tipsy-options" label="Tipsy"
-image="chrome://tipsy/skin/customer-button.png">
+image="chrome://tipsy/skin/preference-icon.png">
 
 <!-- Intermediary between GUI and preferences system -->
 <preferences>
 <!-- not yet linked any of the radio button preferences but this is my next task - Ahmad -->
 <preference id="configuration-pref" name="extensions.tipsy.configuration-pref" type="bool"/>
 <preference id="exportdata-pref" name="extensions.tipsy.exportdata-pref" type="bool"/>
+<preference id="alert-policymismatch-pref" name="extensions.tipsy.alert-policymismatch-pref" type="bool"/>
 </preferences>
 
 <!-- GUI elements-->
@@ -29,6 +30,7 @@ image="chrome://tipsy/skin/customer-button.png">
 </groupbox>
 
 <groupbox>
+<checkbox id = "alert-policymismatch-checkbox" preference = "alert-policymismatch-pref" label="Check this checkbox if you would like Tipsy to alert you when a connection has not been established with a vendor as their policy doesn't match yours" checked="true"/>
 <checkbox id = "exportdata-checkbox" preference = "exportdata-pref" label="Check this checkbox if you would like Tipsy to alert you when it is possible to export data that a vendor holds on you"/>
 </groupbox>
 </prefpane>

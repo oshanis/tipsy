@@ -33,7 +33,7 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 >
 	</toolbarbutton>
 		   
-	<toolbarbutton type="menu-button" id="vendor-button-no-rdfa" label="Tipsy" 
+	<toolbarbutton type="menu-button" id="vendor-button" label="Tipsy" 
 			tooltiptext="Site" 
 			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 			insertbefore="urlbar-container">
