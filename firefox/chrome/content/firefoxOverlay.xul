@@ -7,13 +7,13 @@
   
   <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
 
-   <!-- Adding a status bar panel for easier access to Tipsy Sidebar -->
+   <!-- Adding a status bar panel for easier access to Emancy Sidebar -->
 <statusbar id="status-bar">
    <statusbarpanel class="statusbarpanel-iconic"
 	id="tipsy-status-bar"
 	onclick= "toggleSidebar('viewTipsy');"
 	src="chrome://tipsy/skin/statusbar.png"
-	tooltiptext="Click to access the Tipsy Sidebar"
+	tooltiptext="Click to access the Emancy Sidebar"
  />
  </statusbar>
 
@@ -33,7 +33,7 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 >
 	</toolbarbutton>
 		   
-	<toolbarbutton type="menu-button" id="vendor-button" label="Tipsy" 
+	<toolbarbutton type="menu-button" id="vendor-button"
 			tooltiptext="Site" 
 			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 			insertbefore="urlbar-container">
