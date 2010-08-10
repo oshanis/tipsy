@@ -1,6 +1,7 @@
 content	tipsy	chrome/content/
 locale	tipsy	en-US	chrome/locale/en-US/
 skin	tipsy	classic/1.0	chrome/skin/
+skin tipsy-os classic/1.0	chrome/skin/unix/
 skin tipsy-os classic/1.0	chrome/skin/mac/    os=Darwin
 skin tipsy-os classic/1.0	chrome/skin/win/    os=WINNT
 
