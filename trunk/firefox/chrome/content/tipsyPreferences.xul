@@ -1,39 +1,62 @@
 <?xml version="1.0"?>
+<overlay id = "tipsyPreferences" xmlns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<overlay id="tipsyPreferences"
-xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <!--Need to merge with the BrowserPreferences window -->
+    <prefwindow id = "BrowserPreferences">
 
-<!-- Need to merge with the BrowserPreferences window -->
-<prefwindow id="BrowserPreferences">
+        <!--This code contains the icon and label on the options dialogue box  -->
+        <prefpane id = "tipsy-options" label = "Emancy" image = "chrome://tipsy/skin/preference-icon.png">
 
-<!-- This code contains the icon and label on the options dialogue box  -->
-<prefpane id="tipsy-options" label="Emancy"
-image="chrome://tipsy/skin/preference-icon.png">
+            <!--Intermediary between GUI and preferences system -->
+            <preferences>
+                <!--not yet linked any of the radio button preferences but this is my next task - Ahmad -->
+                <preference id = "configuration-pref" name = "extensions.tipsy.configuration-pref" type = "bool"/>
+                <preference id = "exportdata-pref" name = "extensions.tipsy.exportdata-pref" type = "bool"/>
+                <preference id = "alert-policymismatch-pref" name = "extensions.tipsy.alert-policymismatch-pref" type = "bool"/>
+            </preferences>
 
-<!-- Intermediary between GUI and preferences system -->
-<preferences>
-<!-- not yet linked any of the radio button preferences but this is my next task - Ahmad -->
-<preference id="configuration-pref" name="extensions.tipsy.configuration-pref" type="bool"/>
-<preference id="exportdata-pref" name="extensions.tipsy.exportdata-pref" type="bool"/>
-<preference id="alert-policymismatch-pref" name="extensions.tipsy.alert-policymismatch-pref" type="bool"/>
-</preferences>
+            <!--GUI elements-->
+            <tabbox id = "emancyTabList" selectedIndex = "0">
+                <tabs>
+                    <tab label = "My Terms"/>
+                    <tab label = "My payment preferences"/>
+                    <tab label = "My relationships"/>
+                    <tab label = "Activity"/>
+                </tabs>
 
-<!-- GUI elements-->
-<groupbox>
-  <caption label="Adjust your Emancy configuration for which kind of vendors you would like to connect with"/>
-<radiogroup id = "configuration-radiogroup" preference = "configuration-pref">
-  <radio id="no-data-pref-radio" label="Only connect with vendors that collect no data about me" selected="true" tabindex = "1"/>
-  <radio id="no-third-party-pref-radio" label="Connect with vendors as long as the data they collect about me is not personally identifiable and they do not pass my data onto third parties" tabindex = "2"/>
-  <radio id="no-third-party-pref-radio" label="Connect with vendors as long as the data they collect about me is not personally identifiable" tabindex = "3"/>
-  <radio id="all-vendors-pref-radio" label="Connect with all vendors where possible" tabindex = "4"/>
-</radiogroup>
-</groupbox>
+                <tabpanels>
+					
+				 <!-- For the first panel I have used a vbox instead of a tabpanel - Ahmad-->
+                    <vbox>
+                        <groupbox>
+                            <caption label = "Adjust your Emancy configuration for which kind of vendors you would like to connect with"/>
+                            <radiogroup id = "configuration-radiogroup" preference = "configuration-pref">
+                                <radio id = "no-data-pref-radio" label = "Only connect with vendors that collect no data about me" selected = "true" tabindex = "1"/>
+                                <radio id = "no-third-party-pref-radio" label = "Connect with vendors as long as the data they collect about me is not personally identifiable and they do not pass my data onto third parties" tabindex = "2"/>
+                                <radio id = "no-third-party-pref-radio" label = "Connect with vendors as long as the data they collect about me is not personally identifiable" tabindex = "3"/>
+                                <radio id = "all-vendors-pref-radio" label = "Connect with all vendors where possible" tabindex = "4"/>
+                            </radiogroup>
+                        </groupbox>
+                        <groupbox>
+                            <checkbox id = "alert-policymismatch-checkbox" preference = "alert-policymismatch-pref" label = "Check this checkbox if you would like Emancy to alert you when a connection has not been established with a vendor as their policy doesn't match yours" checked = "true"/>
+                            <checkbox id = "exportdata-checkbox" preference = "exportdata-pref" label = "Check this checkbox if you would like Emancy to alert you when it is possible to export data that a vendor holds on you"/>
+                        </groupbox>
+                    </vbox>
 
-<groupbox>
-<checkbox id = "alert-policymismatch-checkbox" preference = "alert-policymismatch-pref" label="Check this checkbox if you would like Emancy to alert you when a connection has not been established with a vendor as their policy doesn't match yours" checked="true"/>
-<checkbox id = "exportdata-checkbox" preference = "exportdata-pref" label="Check this checkbox if you would like Emancy to alert you when it is possible to export data that a vendor holds on you"/>
-</groupbox>
-</prefpane>
-</prefwindow>
+           			<!--Second panel-->
+                    <tabpanel>
+                    </tabpanel>
 
-</overlay> 
+           			<!--Third panel-->
+                    <tabpanel>
+                    </tabpanel>
+
+           			<!--Fourth panel-->
+                    <tabpanel>
+					</tabpanel>
+
+                </tabpanels>
+            </tabbox>
+        </prefpane>
+    </prefwindow>
+</overlay>
