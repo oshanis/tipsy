@@ -11,7 +11,7 @@
 <statusbar id="status-bar">
    <statusbarpanel class="statusbarpanel-iconic"
 	id="tipsy-status-bar"
-	onclick= "toggleSidebar('viewTipsy');"
+	onclick="openPreferences('tipsy-options');"
 	src="chrome://tipsy/skin/statusbar.png"
 	tooltiptext="Click to access the Emancy Sidebar"
  />
@@ -29,8 +29,7 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 		   oncommand="customerbuttonjs[1]()"
 		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 		   insertbefore="urlbar-container"
-		   onclick="openPreferences('tipsy-options');"
->
+	>
 	</toolbarbutton>
 		   
 	<toolbarbutton type="menu-button" id="vendor-button"
