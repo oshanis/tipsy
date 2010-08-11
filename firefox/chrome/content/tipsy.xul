@@ -18,76 +18,12 @@
 
   <tabbox  flex="1">
     <tabs >
-       <tab label="Activity"     />
        <tab label="Settings" />
     </tabs>
     <tabpanels flex="1" >
 
-   <!-- Activity Tab -->
-     <groupbox>
-        <hbox pack="start">
-           <label value="Activity Panel" />
-	   <!-- add nifty graph visualizations of sites visited and sites the user liked. Slider to select time frame. -->
-       
-		</hbox>
-		
-	        <hbox pack="center">
-	  <listbox id="website_history">
-	    <listhead>
-	      <listheader>Web Site</listheader>
-	      <listheader>Creator</listheader>
-	      <listheader>Username</listheader>
-	      <listheader>Page URL</listheader>
-	      <listheader>Datetime</listheader>
-	    </listhead>
-	    <listcols>
-	      <listcol></listcol>
-	      <listcol></listcol>
-	      <listcol></listcol>
-	      <listcol></listcol>
-	      <listcol></listcol>
-	    </listcols>
-	    
-	  </listbox>
-	  </hbox>
 
-        <hbox>
-           <button oncommand="refreshTable()" align="center"><label width="10">Refresh Table</label></button>
-           <button oncommand="clearHistory()" align="center"><label width="10">Clear History</label></button>
-       </hbox>
-   </groupbox>
-
-   <!-- Settings Tab -->
-   <groupbox>
-        <hbox>
-           <label  value="How much is the web worth to you? " /> <textbox id="web-worth" maxlength="5"  size="5"
- oninput="validateWebWorth" value="$" />
-        </hbox>
-        <hbox>
-           <radiogroup flex="1">
-       <label value="How frequently do you want to run the election?"/>
-       <radio label="Once a week"   
-              oncommand="validateFrequency()" />
-       <radio label="Once every two weeks"   
-              oncommand="validateFrequency()" />
-       <radio label="Once a month" selected="true"
-              oncommand="validateFrequency()" />
-       <radio label="Once every two months"   
-              oncommand="validateFrequency()" />
-       <radio label="Once every six months"   
-              oncommand="validateFrequency()" />
-
-        </radiogroup>
-
-        </hbox>
-        <hbox>
-           <label value="Your PayPal Account:" /> <textbox oninput="changePayPalAccount()" />               
-        </hbox>
-         <hbox>
-           <button oncommand="updateInfo()"><label width="20">Save Information</label></button>
-       </hbox>
-
-   </groupbox>
+   
 
     </tabpanels>
   </tabbox>
