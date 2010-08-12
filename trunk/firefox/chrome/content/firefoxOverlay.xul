@@ -22,15 +22,17 @@
 Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
 <toolbox id="navigator-toolbox">
 
-  <toolbar id="nav-bar">
+  <toolbar id="nav-bar" insertbefore="urlbar-container">
 
     <toolbarbutton id="customer-button"
 		   tooltiptext="Me"
 		   oncommand="customerbuttonjs[1]()"
 		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 		   insertbefore="urlbar-container"
+
 	>
 	</toolbarbutton>
+
 		   
 	<toolbarbutton type="menu-button" id="vendor-button"
 			tooltiptext="Site" 
@@ -54,11 +56,10 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 		</menupopup>
 		
 	</toolbarbutton>
-		
-  </toolbar>
-  
-</toolbox>
 
+  </toolbar>
+
+</toolbox>
 	
   <menupopup id="viewSidebarMenu">
     <menuitem key="key_openTipsy" observes="viewTipsy"  />
@@ -80,6 +81,12 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
                  sidebartitle="&tipsy.title;"
                  oncommand="toggleSidebar('viewTipsy');" />
   </broadcasterset>
-
-
 </overlay>
+
+	<!-- Attempting to add code to position the r-buttons to before the url bar, however code not working, needs further investigation, Ahmad -->
+  			<code>
+				var beforeElement = document.getElementById(#urlbar-container);
+				tb.insertItem(customer-button, beforeElement);
+				tb.insertItem(vendor-button, beforeElement);
+				document.persist("nav-bar", "currentset");
+		   </code> 
