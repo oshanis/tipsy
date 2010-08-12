@@ -3,7 +3,7 @@
 <?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
 <!DOCTYPE page SYSTEM "chrome://tipsy/locale/tipsy.dtd">
 
-<page id="sbTipsy" 
+<page id="sbTipsyXXXXXXXXXXXXXXXXXXXXXXXXX" 
       title="&tipsy.title;"
       xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
       <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
