@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
-<overlay id = "tipsyPreferences" xmlns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<?xml-stylesheet href="chrome://global/skin/" type"text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<!DOCTYPE page SYSTEM "chrome://tipsy/locale/tipsy.dtd">
+
+<!-- use a page-tag rather than an overlay-tag or the title bar will not appear
+	 in the stand-alone prefernces window and will crash firefox, Ahmad -->
+<page id="sbTipsy" 
+      title="&tipsy.title;"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <!--Need to merge with the BrowserPreferences window -->
     <prefwindow id = "BrowserPreferences">
@@ -116,4 +124,4 @@
         </prefpane>
     </prefwindow>
 
-</overlay>
+</page>
