@@ -9,63 +9,36 @@
 refreshTable = function(){
     
     var visits = tipsy.db.getvisits();
-    //var document = sidebar.contentDocument;
     var website_history = document.getElementById("website_history");
-    
-    //Clear the contents of the table
-    //@@TODO: this will be wasteful if there are millions of entries, and you would 
-    //only need to add one entry to the table
-    while(  website_history.hasChildNodes()){
-        website_history.removeChild(website_history.firstChild);
-    }
-    //After flushing all the content, add the headers.
-    var headers = document.createElement("listhead");
-    headers.appendChild(document.createElement("listheader").appendChild(document.createTextNode("Web Site")));
-    headers.appendChild(document.createElement("listheader").appendChild(document.createTextNode("Creator")));
-    headers.appendChild(document.createElement("listheader").appendChild(document.createTextNode("Username")));
-    headers.appendChild(document.createElement("listheader").appendChild(document.createTextNode("Page URL")));
-    headers.appendChild(document.createElement("listheader").appendChild(document.createTextNode("Datetime")));
-    
-    /*var columns = document.createElement("listcols");
-    for (var i=0; i<5; i++)
-        columns.appendChild(document.createElement("listCol"));*/
-    
-    website_history.appendChild(headers);
-    //website_history.appendChild(columns);
     
     
     while (visits.executeStep()) {
-        var website_listitem = document.createElement("listitem");
-        
-        var website = document.createElement("listcell");
-        website.appendChild(document.createTextNode(visits.row.site));
-        var creator = document.createElement("listcell");
-        creator.appendChild(document.createTextNode(visits.row.creator));
-        var username = document.createElement("listcell");
-        username.appendChild(document.createTextNode(visits.row.username));
-        var pageurl = document.createElement("listcell");
-        pageurl.appendChild(document.createTextNode(visits.row.pageurl));
-        var datetime = document.createElement("listcell");
-        datetime.appendChild(document.createTextNode(visits.row.datetime));
     
-        try{
-            website_listitem.appendChild(website);
-            website_listitem.appendChild(creator);
-            website_listitem.appendChild(username);
-            website_listitem.appendChild(pageurl);
-            website_listitem.appendChild(datetime);
+        var row = document.createElement('listitem');
+        
+        var site_cell = document.createElement('listcell');
+        site_cell.setAttribute('label', visits.row.site);
+        row.appendChild(site_cell);
 
-            website_history.appendChild(website_listitem);
+        var creator_cell = document.createElement('listcell');
+        creator_cell.setAttribute('label',  visits.row.creator );
+        row.appendChild(creator_cell);
 
-            document.appendChild(website_listitem);
-        }
-        catch(e){
-            log("Tried to add " +visits.row.site + " , " + visits.row.creator +  " , " + 
-                visits.row.username +  " , " + visits.row.pageurl +  " , " + visits.row.datetime +
-                " in the UI. But encountered the following error: ");
-            log(e);
-            
-        }
+        var username_cell = document.createElement('listcell');
+        username_cell.setAttribute('label',  visits.row.username );
+        row.appendChild(username_cell);
+
+        var pageurl_cell = document.createElement('listcell');
+        pageurl_cell.setAttribute('label',  visits.row.pageurl );
+        row.appendChild(pageurl_cell);
+
+        var datetime_cell = document.createElement('listcell');
+        datetime_cell.setAttribute('label',  visits.row.datetime );
+        row.appendChild(datetime_cell);
+
+        website_history.appendChild(row);
+        
+
     }
     
 }
