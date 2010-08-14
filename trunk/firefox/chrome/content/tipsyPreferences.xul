@@ -3,23 +3,14 @@
 <?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
 <!DOCTYPE page SYSTEM "chrome://tipsy/locale/tipsy.dtd">
 
-
-<!-- use a page-tag rather than an overlay-tag or the title bar will not appear
+	<!-- use a page-tag rather than an overlay-tag or the title bar will not appear
 	 in the stand-alone prefernces window and will crash firefox, Ahmad -->
 <page id="sbTipsy" title="&tipsy.title;"
       xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-	  <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
-      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.core.min-1.0.js" type="text/javascript"></script>
-      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rdfa.min-1.0.js" type="text/javascript"></script>
-      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rules.min-1.0.js" type="text/javascript"></script>
-      <script src="http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js" type="text/javascript"></script>
-	  <script src="log.js" type="text/javascript"></script>
-      <script src="db.js" type="text/javascript"></script>
-      <script src="tipsy_parser.js" type="text/javascript"></script>
-      <script src="tipsy_ui.js" type="text/javascript"></script>
 
     <!--Need to merge with the BrowserPreferences window -->
     <prefwindow id = "BrowserPreferences">
+	
 
         <!--This code contains the icon and label on the options dialogue box  -->
         <prefpane id = "tipsy-options" label = "Emancy" image = "chrome://tipsy/skin/preference-icon.png">
@@ -30,6 +21,7 @@
                 <preference id = "configuration-pref" name = "extensions.tipsy.configuration-pref" type = "bool"/>
                 <preference id = "exportdata-pref" name = "extensions.tipsy.exportdata-pref" type = "bool"/>
                 <preference id = "alert-policymismatch-pref" name = "extensions.tipsy.alert-policymismatch-pref" type = "bool"/>
+				
             </preferences>
 
 
@@ -131,7 +123,20 @@
 
                 </tabpanels>
             </tabbox>
+			
         </prefpane>
+		
     </prefwindow>
 
 </page>
+
+	<!-- This JavaScript code should go at about line 10 (after page decleration) but is currently causing the prefrence tab to not appear-->
+	  <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.core.min-1.0.js" type="text/javascript"></script>
+      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rdfa.min-1.0.js" type="text/javascript"></script>
+      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rules.min-1.0.js" type="text/javascript"></script>
+      <script src="http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js" type="text/javascript"></script>
+	  <script src="log.js" type="text/javascript"></script>
+      <script src="db.js" type="text/javascript"></script>
+      <script src="tipsy_parser.js" type="text/javascript"></script>
+      <script src="tipsy_ui.js" type="text/javascript"></script>
