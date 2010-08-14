@@ -6,6 +6,7 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   
   <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
+  <script type="application/javascript" src="chrome://tipsy/content/checkrdfa.js"/>
 
    <!-- Adding a status bar panel for easier access to Emancy Sidebar -->
 <statusbar id="status-bar">
@@ -33,8 +34,30 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 	>
 	</toolbarbutton>
 
-		   
-	<toolbarbutton type="menu-button" id="vendor-button"
+		<toolbarbutton type="menu-button" id="vendor-button-active-rdfa"
+			tooltiptext="Site" 
+			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
+			insertbefore="urlbar-container">
+		<menupopup>
+						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
+								  
+					<menuseparator />
+					    
+						<menuitem id="twitter-menuitem" class="menuitem-iconic" label="Twitter" onclick="open_webpage('http://www.twitter.com/', event)"/>
+						<menuitem id="facebook-menuitem" class="menuitem-iconic" label="Facebook" onclick="open_webpage('http://www.facebook.com/', event)"/>
+						<menuitem id="linkedin-menuitem" class="menuitem-iconic" label="LinkedIn" onclick="open_webpage('http://www.linkedin.com/', event)"/>
+						<menuitem id="stumbleupon-menuitem" class="menuitem-iconic" label="StumbleUpon" onclick="open_webpage('http://www.stumbleupon.com/', event)"/>
+						
+					<menuseparator />
+					
+						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle" onclick="open_webpage('http://www.google.com/ig/', event)"/>	
+						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS" />
+						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo" onclick="open_webpage('http://my.yahoo.com/', event)"/>
+		</menupopup>
+		
+	</toolbarbutton>
+	
+	<toolbarbutton type="menu-button" id="vendor-button-no-rdfa"
 			tooltiptext="Site" 
 			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 			insertbefore="urlbar-container">
