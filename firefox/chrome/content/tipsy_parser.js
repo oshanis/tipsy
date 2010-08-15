@@ -16,6 +16,7 @@ var tipsy = {
     onPageLoad: function(aEvent) {
         var doc = aEvent.originalTarget;
         if (doc instanceof HTMLDocument){
+
             //Try to parse the RDFa out of the HTML
             var rdf = $('#tipsy')
                  .rdf()
@@ -29,7 +30,8 @@ var tipsy = {
                     log('Parsed the following out of the rdfa\nMethod = '+ this.method.value + '\nSite = '+this.site.value+'\nCreator = '+this.creator.value+'\nUsername = '+this.username.value +"\nDoc = "+ this.doc.value);
                     tipsy.db.visit(this.site.value, this.creator.value, this.username.value, this.doc.value);
                  });
-        }
+		
+		}
         
     },
     
