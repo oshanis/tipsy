@@ -84,26 +84,6 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 
 </toolbox>
 	
-  <menupopup id="viewSidebarMenu">
-    <menuitem key="key_openTipsy" observes="viewTipsy"  />
-  </menupopup>
-  
-  <keyset id="mainKeyset">
-    <key id="key_openTipsy" command="viewTipsy"
-         key="&openTipsy.commandkey;" 
-         modifiers="&openTipsy.modifierskey;" />
-  </keyset>
-  
-  <broadcasterset id="mainBroadcasterSet"> 
-    <broadcaster id="viewTipsy" 
-                 label="&tipsy.title;"
-                 autoCheck="false"
-                 type="checkbox"
-                 group="sidebar"
-                 sidebarurl="chrome://tipsy/content/tipsy.xul"
-                 sidebartitle="&tipsy.title;"
-                 oncommand="toggleSidebar('viewTipsy');" />
-  </broadcasterset>
 </overlay>
 
 	<!-- Attempting to add code to position the r-buttons to before the url bar, however code not working, needs further investigation, Ahmad -->
