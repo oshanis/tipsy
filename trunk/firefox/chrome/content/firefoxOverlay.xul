@@ -13,7 +13,7 @@
    <statusbarpanel class="statusbarpanel-iconic"
 	id="tipsy-status-bar"
 	onclick="openPreferences('tipsy-options');"
-	src="chrome://tipsy/skin/statusbar.png"
+	src="chrome://tipsy/skin/statusbar-icon.png"
 	tooltiptext="Click to access the Emancy Sidebar"
  />
  </statusbar>
@@ -39,20 +39,8 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 			insertbefore="urlbar-container">
 		<menupopup>
-						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
+						<menuitem id="how-menuitem" class="menuitem-iconic" label="How"/>
 								  
-					<menuseparator />
-					    
-						<menuitem id="twitter-menuitem" class="menuitem-iconic" label="Twitter" onclick="open_webpage('http://www.twitter.com/', event)"/>
-						<menuitem id="facebook-menuitem" class="menuitem-iconic" label="Facebook" onclick="open_webpage('http://www.facebook.com/', event)"/>
-						<menuitem id="linkedin-menuitem" class="menuitem-iconic" label="LinkedIn" onclick="open_webpage('http://www.linkedin.com/', event)"/>
-						<menuitem id="stumbleupon-menuitem" class="menuitem-iconic" label="StumbleUpon" onclick="open_webpage('http://www.stumbleupon.com/', event)"/>
-						
-					<menuseparator />
-					
-						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle" onclick="open_webpage('http://www.google.com/ig/', event)"/>	
-						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS" />
-						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo" onclick="open_webpage('http://my.yahoo.com/', event)"/>
 		</menupopup>
 		
 	</toolbarbutton>
@@ -62,20 +50,8 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 			insertbefore="urlbar-container">
 		<menupopup>
-						<menuitem id="terms-menuitem" class="menuitem-iconic" label="Terms"/>
-								  
-					<menuseparator />
-					    
-						<menuitem id="twitter-menuitem" class="menuitem-iconic" label="Twitter" onclick="open_webpage('http://www.twitter.com/', event)"/>
-						<menuitem id="facebook-menuitem" class="menuitem-iconic" label="Facebook" onclick="open_webpage('http://www.facebook.com/', event)"/>
-						<menuitem id="linkedin-menuitem" class="menuitem-iconic" label="LinkedIn" onclick="open_webpage('http://www.linkedin.com/', event)"/>
-						<menuitem id="stumbleupon-menuitem" class="menuitem-iconic" label="StumbleUpon" onclick="open_webpage('http://www.stumbleupon.com/', event)"/>
-						
-					<menuseparator />
-					
-						<menuitem id="igoogle-menuitem" class="menuitem-iconic" label="iGoogle" onclick="open_webpage('http://www.google.com/ig/', event)"/>	
-						<menuitem id="rss-menuitem" class="menuitem-iconic" label="RSS" />
-						<menuitem id="myyahoo-menuitem" class="menuitem-iconic" label="myYahoo" onclick="open_webpage('http://my.yahoo.com/', event)"/>
+						<menuitem id="how-menuitem" class="menuitem-iconic" label="How"/>
+
 		</menupopup>
 		
 	</toolbarbutton>

@@ -11,39 +11,7 @@ list-style-image: url("chrome://tipsy-os/skin/vendor-button-no-rdfa.png");
 list-style-image: url("chrome://tipsy-os/skin/vendor-button-active-rdfa.png");
 
 }
-  
-#twitter-menuitem{
-    list-style-image: url("chrome://tipsy/skin/twitter.png");
-}
-
-#facebook-menuitem{
-    list-style-image: url("chrome://tipsy/skin/facebook.png");
-}
-
-#linkedin-menuitem{
-    list-style-image: url("chrome://tipsy/skin/linkedin.png");
-}
-
-#stumbleupon-menuitem{
-    list-style-image: url("chrome://tipsy/skin/stumbleupon.png");
-}
-
-#igoogle-menuitem{
-    list-style-image: url("chrome://tipsy/skin/igoogle.png");
-}
-
-#rss-menuitem{
-    list-style-image: url("chrome://tipsy/skin/rss.png");
-}
-
-#myyahoo-menuitem{
-    list-style-image: url("chrome://tipsy/skin/myyahoo.png");
-}
-
-#terms-menuitem{
-    list-style-image: url("chrome://tipsy/skin/terms.png");
-}
 
 #tipsy-statusbar-icon{
-    list-style-image: url("chrome://tipsy/skin/statusbar.png");
+    list-style-image: url("chrome://tipsy/skin/statusbar-icon.png");
 }
