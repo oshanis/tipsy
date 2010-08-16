@@ -12,14 +12,21 @@
 
 
 <body>
-View Source to see the RDFa embedded in this page. On page load it
-will be parsed as long as the RDFa is embedded in a element with an id
+<br>
+<u>This is an example webpage with RDFa embedded within it.</u>
+<br><br/>
+On page load the Emancy application will parse the metadata. That is it will store the data about the author, the content provider, the payment method etc.<br/>
+This process will also work on any other webpage with RDFa embedded in a element with an id
 called "tipsy".
+<br><br/>
+<small>  Tips: </br>
+To see the RDFa embedded in this page right-click and select "View Source".</br>
+To see what has been stored as a result of visiting this test page click the small Emancy icon (bottom right) and select the "Activity" tab in the preference window that opens. </small>
 
 <!-- The following "invisible" snippet is to be embedded in the web -->
 <!-- pages -->
 <span id="tipsy">
-This is the tipsy div
+<!--This is the tipsy div -->
 <span xmlns:dc="http://purl.org/dc/elements/1.1/" 
      xmlns:foaf="http://xmlns.com/foaf/0.1/" 
      xmlns:pmt="http://tipsy.googlecode.com/svn/trunk/vocab/pmt#" 

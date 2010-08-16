@@ -129,14 +129,3 @@
     </prefwindow>
 
 </page>
-
-	<!-- This JavaScript code should go at about line 10 (after page decleration) but is currently causing the prefrence tab to not appear-->
-	  <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
-      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.core.min-1.0.js" type="text/javascript"></script>
-      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rdfa.min-1.0.js" type="text/javascript"></script>
-      <script src="http://rdfquery.googlecode.com/files/jquery.rdfquery.rules.min-1.0.js" type="text/javascript"></script>
-      <script src="http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js" type="text/javascript"></script>
-	  <script src="log.js" type="text/javascript"></script>
-      <script src="db.js" type="text/javascript"></script>
-      <script src="tipsy_parser.js" type="text/javascript"></script>
-      <script src="tipsy_ui.js" type="text/javascript"></script>

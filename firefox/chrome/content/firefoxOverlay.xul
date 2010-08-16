@@ -14,7 +14,7 @@
 	id="tipsy-status-bar"
 	onclick="openPreferences('tipsy-options');"
 	src="chrome://tipsy/skin/statusbar-icon.png"
-	tooltiptext="Click to access the Emancy Sidebar"
+	tooltiptext="Click to access the Emancy preference window"
  />
  </statusbar>
 
