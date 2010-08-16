@@ -18,6 +18,7 @@
 	src="chrome://tipsy/skin/statusbar-icon.png"
 	tooltiptext="Click to access the Emancy preference window"
  />
+ 
  </statusbar>
 
 
@@ -27,13 +28,17 @@ Follow this tutorial for more information: http://www.borngeek.com/firefox/toolb
 
   <toolbar id="nav-bar" insertbefore="urlbar-container">
 
-    <toolbarbutton id="customer-button"
+    <toolbarbutton type="menu-button" id="customer-button"
 		   tooltiptext="Me"
 		   oncommand="customerbuttonjs[1]()"
 		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
 		   insertbefore="urlbar-container"
 
 	>
+		<menupopup>
+			<menuitem id="compliant-menuitem" class="menuitem-iconic" label="The vendors terms are compliant with your own"/>
+			<menuitem id="compare-menuitem" class="menuitem-iconic" label="Compare policies"/>				  
+		</menupopup>
 	</toolbarbutton>
 
 		<toolbarbutton type="menu-button" id="vendor-button-active-rdfa"
