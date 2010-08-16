@@ -6,7 +6,6 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   
   <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
-  <script type="application/javascript" src="chrome://tipsy/content/checkrdfa.js"/>
   <script type="application/javascript" src="chrome://tipsy/content/db.js"/>
   <script type="application/javascript" src="chrome://tipsy/content/tipsy_parser.js"/>
   <script type="application/javascript" src="chrome://tipsy/content/log.js"/>
