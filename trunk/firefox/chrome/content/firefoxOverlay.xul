@@ -7,6 +7,9 @@
   
   <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
   <script type="application/javascript" src="chrome://tipsy/content/checkrdfa.js"/>
+  <script type="application/javascript" src="chrome://tipsy/content/db.js"/>
+  <script type="application/javascript" src="chrome://tipsy/content/tipsy_parser.js"/>
+  <script type="application/javascript" src="chrome://tipsy/content/log.js"/>
 
    <!-- Adding a status bar panel for easier access to Emancy Sidebar -->
 <statusbar id="status-bar">
