@@ -14,21 +14,6 @@ myWindow .document.body.innerHTML = "<div>hello world!!</div>";*/
 
 vendorbuttonjs = {
 
-/*
-   // update the image and the label
-   if( ) 
-   {
-      statusImage.src = "chrome://tipsy/skin/vendor-button-no-rdfa.png";
-   }
-   else
-   {
-      statusImage.src = "chrome://tipsy/skin/vendor-button-active-rdfa.png";
-   }
-*/
-
-		/*vendor-button-no-rdfa.src = "chrome://tipsy-os/skin/vendor-button.png";*/
-		
-
 }
 
 

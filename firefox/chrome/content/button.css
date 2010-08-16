@@ -1,5 +1,10 @@
-#customer-button{
-	list-style-image: url("chrome://tipsy-os/skin/customer-button.png");
+#customer-button-no-relationship{
+	list-style-image: url("chrome://tipsy-os/skin/customer-button-no-relationship.png");
+	
+}
+
+#customer-button-active-relationship{
+	list-style-image: url("chrome://tipsy-os/skin/customer-button-active-relationship.png");
 	
 }
 
