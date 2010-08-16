@@ -27,8 +27,33 @@ function rdfaStatus() {
 	if (true) {
 	// currently the above line of code always executes to true, I need to replace this so that it checks for rdfa on the page
     //if (doc instanceof HTMLDocument){ //rdfa found:
-		redbutton.style.display = '';
-		greybutton.style.display = 'none';
+		redbutton.style.display = 'none';
+		greybutton.style.display = '';
+			
+	/*Another attempt to move the r-buttons before the url bar, based on another add-on googlebuttons, however this also does not work
+			try {
+				var firefoxnav = document.getElementById("nav-bar");
+				var curSet = firefoxnav.currentSet;
+				if (curSet.indexOf("vendor-button-active-rdfa") == -1)
+				{
+				var set;
+				// place r-button before the urlbar
+				if (curSet.indexOf("urlbar-container") != -1)
+					set = curSet.replace(/urlbar-container/, "vendor-button-active-rdfa,urlbar-container");
+				else  // at the end
+					set = curSet + ",vendor-button-active-rdfa";
+				firefoxnav.setAttribute("currentset", set);
+				firefoxnav.currentSet = set;
+				document.persist("nav-bar", "currentset");
+				// If you don't do the following call, funny things happen
+				try {
+					BrowserToolboxCustomizeDone(true);
+				}
+					catch (e) { alert("Error on automatic adding (inner try):\n" + e.name + ", " + e.message); }
+				}
+			}
+			catch(e) { alert("Error on automatic adding:\n" + e.name + ", " + e.message); }
+	*/
 	}
 	else {
 		greybutton.style.display = '';
