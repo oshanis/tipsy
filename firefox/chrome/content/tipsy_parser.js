@@ -37,8 +37,8 @@ var tipsy = {
 
                  });
                  
-		
-		}
+                
+                }
         
     },
     
@@ -46,7 +46,7 @@ var tipsy = {
         var redbutton = document.getElementById('vendor-button-active-rdfa');
         var greybutton = document.getElementById('vendor-button-no-rdfa');
         if (color == 'red'){
-        	greybutton.style.display = 'none';
+                greybutton.style.display = 'none';
             redbutton.style.display = '';
         }
         else{
