@@ -2,77 +2,65 @@
 <?xml-stylesheet type="text/css" href="chrome://tipsy/content/button.css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://tipsy/locale/tipsy.dtd">
-<overlay id="tipsyOverlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  
-  <script type="application/javascript" src="chrome://tipsy/content/button.js"/>
-  <script type="application/javascript" src="chrome://tipsy/content/db.js"/>
-  <script type="application/javascript" src="chrome://tipsy/content/tipsy_parser.js"/>
-  <script type="application/javascript" src="chrome://tipsy/content/log.js"/>
+<overlay id = "tipsyOverlay" xmlns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-   <!-- Adding a status bar panel for easier access to Emancy Sidebar -->
-<statusbar id="status-bar">
-   <statusbarpanel class="statusbarpanel-iconic"
-	id="tipsy-status-bar"
-	onclick="openPreferences('tipsy-options');"
-	src="chrome://tipsy/skin/statusbar-icon.png"
-	tooltiptext="Click to access the Emancy preference window"
- />
- 
- </statusbar>
+    <script type = "application/javascript" src = "chrome://tipsy/content/button.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/db.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/tipsy_parser.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/log.js"/>
 
+    <!--Adding a status bar panel for easier access to Emancy Sidebar -->
+    <statusbar id = "status-bar">
+        <statusbarpanel
+            class = "statusbarpanel-iconic"
+            id = "tipsy-status-bar"
+            onclick = "openPreferences('tipsy-options');"
+            src = "chrome://tipsy/skin/statusbar-icon.png"
+            tooltiptext = "Click to access the Emancy preference window"/>
+    </statusbar>
 
-	<!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
-Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
-<toolbox id="navigator-toolbox">
+    <!--Adding the button in the navigation bar as Doc suggested, and not go through the toolbar pallette as Ahmad has done (Oshani)
+    Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
+    <toolbox id = "navigator-toolbox">
 
-  <toolbar id="nav-bar" insertbefore="urlbar-container">
+        <toolbar id = "nav-bar" insertbefore = "urlbar-container">
 
-    <toolbarbutton type="menu-button" id="customer-button"
-		   tooltiptext="Me"
-		   oncommand="customerbuttonjs[1]()"
-		   class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-		   insertbefore="urlbar-container"
+            <toolbarbutton type = "menu-button" id = "customer-button-active-relationship"
+                tooltiptext = "Me"
+                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
+                <menupopup>
+                    <menuitem id = "compliant-menuitem" class = "menuitem-iconic" label = "The vendors terms are compliant with your own"/>
+                    <menuitem id = "compare-menuitem" class = "menuitem-iconic" label = "Compare policies"/>
+                </menupopup>
+            </toolbarbutton>
 
-	>
-		<menupopup>
-			<menuitem id="compliant-menuitem" class="menuitem-iconic" label="The vendors terms are compliant with your own"/>
-			<menuitem id="compare-menuitem" class="menuitem-iconic" label="Compare policies"/>				  
-		</menupopup>
-	</toolbarbutton>
+            <toolbarbutton type = "menu-button"  id = "customer-button-no-relationship"
+                tooltiptext = "Me"
+                oncommand = "customerbuttonjs[1]()"
+                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
+            </toolbarbutton>
 
-		<toolbarbutton type="menu-button" id="vendor-button-active-rdfa"
-			tooltiptext="Site" 
-			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-			insertbefore="urlbar-container">
-		<menupopup>
-						<menuitem id="how-menuitem" class="menuitem-iconic" label="How"/>
-								  
-		</menupopup>
-		
-	</toolbarbutton>
-	
-	<toolbarbutton type="menu-button" id="vendor-button-no-rdfa"
-			tooltiptext="Site" 
-			class="toolbarbutton-1 chromeclass-toolbar-additional tipsy"
-			insertbefore="urlbar-container">
-		<menupopup>
-						<menuitem id="how-menuitem" class="menuitem-iconic" label="How"/>
+            <toolbarbutton type = "menu-button" id = "vendor-button-active-rdfa"
+                tooltiptext = "Site"
+                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
+                <menupopup>
+                    <menuitem id = "how-menuitem" class = "menuitem-iconic" label = "How"/>
+                </menupopup>
+            </toolbarbutton>
 
-		</menupopup>
-		
-	</toolbarbutton>
+            <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfa"
+                tooltiptext = "Site"
+                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
+            </toolbarbutton>
 
-  </toolbar>
-
-</toolbox>
-	
+        </toolbar>
+    </toolbox>
 </overlay>
 
-	<!-- Attempting to add code to position the r-buttons to before the url bar, however code not working, needs further investigation, Ahmad -->
-  			<code>
-				var beforeElement = document.getElementById(#urlbar-container);
-				tb.insertItem(customer-button, beforeElement);
-				tb.insertItem(vendor-button, beforeElement);
-				document.persist("nav-bar", "currentset");
-		   </code> 
+<!--Attempting to add code to position the r-buttons to before the url bar, however code not working, needs further investigation, Ahmad -->
+<code>
+    var beforeElement = document.getElementById(#urlbar-container);
+    tb.insertItem(customer-button, beforeElement);
+    tb.insertItem(vendor-button, beforeElement);
+    document.persist("nav-bar", "currentset");
+</code>
