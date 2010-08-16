@@ -23,7 +23,7 @@
     Follow this tutorial for more information: http://www.borngeek.com/firefox/toolbar-tutorial-->
     <toolbox id = "navigator-toolbox">
 
-        <toolbar id = "nav-bar" insertbefore = "urlbar-container">
+        <toolbar id = "nav-bar">
 
             <toolbarbutton type = "menu-button" id = "customer-button-active-relationship"
                 tooltiptext = "Me"
@@ -32,6 +32,17 @@
                     <menuitem id = "compliant-menuitem" class = "menuitem-iconic" label = "The vendors terms are compliant with your own"/>
                     <menuitem id = "compare-menuitem" class = "menuitem-iconic" label = "Compare policies"/>
                 </menupopup>
+            </toolbarbutton>
+
+            <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfaTEMP"
+                tooltiptext = "Site"
+                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
+            </toolbarbutton>
+
+            <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfa"
+                tooltiptext = "Site"
+				
+                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
             </toolbarbutton>
 
             <toolbarbutton type = "menu-button"  id = "customer-button-no-relationship"
@@ -48,19 +59,6 @@
                 </menupopup>
             </toolbarbutton>
 
-            <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfa"
-                tooltiptext = "Site"
-                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
-            </toolbarbutton>
-
         </toolbar>
     </toolbox>
 </overlay>
-
-<!--Attempting to add code to position the r-buttons to before the url bar, however code not working, needs further investigation, Ahmad -->
-<code>
-    var beforeElement = document.getElementById(#urlbar-container);
-    tb.insertItem(customer-button, beforeElement);
-    tb.insertItem(vendor-button, beforeElement);
-    document.persist("nav-bar", "currentset");
-</code>
