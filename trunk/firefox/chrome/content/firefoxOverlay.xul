@@ -34,19 +34,22 @@
                 </menupopup>
             </toolbarbutton>
 
-            <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfaTEMP"
+            <toolbarbutton type = "menu-button" id = "vendor-button-inactive-rdfa"
                 tooltiptext = "Site"
                 class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
             </toolbarbutton>
 
+			<!--this button is currently buggy, hence the above code has been written to replace it and this one hidden until it can be rectified/removed-->
             <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfa"
                 tooltiptext = "Site"
-				
+				hidden = "true"
                 class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
             </toolbarbutton>
 
+			<!-- this is temporatily set to hidden, once code is created to switch between red and gray, the default setting will be hidden = "false"-->
             <toolbarbutton type = "menu-button"  id = "customer-button-no-relationship"
                 tooltiptext = "Me"
+				hidden = "true"
                 oncommand = "customerbuttonjs[1]()"
                 class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
             </toolbarbutton>

@@ -44,7 +44,7 @@ var tipsy = {
     
     changeVendorButtonColor: function (color){
         var redbutton = document.getElementById('vendor-button-active-rdfa');
-        var greybutton = document.getElementById('vendor-button-no-rdfa');
+        var greybutton = document.getElementById('vendor-button-inactive-rdfa');
         if (color == 'red'){
                 greybutton.style.display = 'none';
             redbutton.style.display = '';
