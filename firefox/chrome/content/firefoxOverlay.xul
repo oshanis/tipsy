@@ -34,13 +34,13 @@
                 </menupopup>
             </toolbarbutton>
 
-            <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfa"
+            <toolbarbutton id = "vendor-button-no-rdfa"
                 tooltiptext = "Site"
                 class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
             </toolbarbutton>
 
 			<!-- this is temporatily set to hidden, once code is created to switch between red and gray, the default setting will be hidden = "false"-->
-            <toolbarbutton type = "menu-button"  id = "customer-button-no-relationship"
+            <toolbarbutton id = "customer-button-no-relationship"
                 tooltiptext = "Me"
 				hidden = "true"
                 oncommand = "customerbuttonjs[1]()"
