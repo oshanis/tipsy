@@ -13,29 +13,60 @@
 <body>
 
 <form>
+<fieldset>
+    <legend>Organization Information</legend>
 <p>Organization name: <input type="text" id="orgname" /></p>
 <p>Organization URL: <input type="text" id="orgurl" /></p>
 <p>Website URL: <input type="text" id="weburl" /></p>
-<p>
-Payment method: <select id="paymethod-choice">
-  <option value="paypal">PayPal</option>
-  <option value="website">Website</option>
-  <option value="phone">Phone</option>
-</select>
-</p>
-<div class="paymethod" id="paymethod-paypal">
-<p>Enter your paypal username: <input type="text" id="paypal-username" /></p>
-</div>
-<div class="paymethod" id="paymethod-website">
-<p>Enter your payment URL: <input type="text" id="website-url" /></p>
-</div>
-<div class="paymethod" id="paymethod-phone">
-<p>Enter your payment phone number: <input type="text" id="phone-number" /></p>
-</div>
+</fieldset>
+<br>
+<fieldset>
+    <legend>Payment Information</legend>
+    <p>
+    Payment method: <select id="paymethod-choice">
+      <option value="paypal">PayPal</option>
+      <option value="website">Website</option>
+      <option value="phone">Phone</option>
+    </select>
+    </p>
+    <div class="paymethod" id="paymethod-paypal">
+    <p>Enter your paypal username: <input type="text" id="paypal-username" /></p>
+    </div>
+    <div class="paymethod" id="paymethod-website">
+    <p>Enter your payment URL: <input type="text" id="website-url" /></p>
+    </div>
+    <div class="paymethod" id="paymethod-phone">
+    <p>Enter your payment phone number: <input type="text" id="phone-number" /></p>
+    </div>
+</fieldset>
+<br>
+<fieldset>
+    <legend>User-oriented Policies</legend>
+
+    <p>
+        <input type="checkbox" name="collect"> We collect and store user
+        information
+    </p>
+    <p>
+        <input type="checkbox" name="third-party"> We share user
+        information with third parties
+    </p>
+    <p>
+        <input type="checkbox" name="advertise"> We will not advertise if a
+        user makes a payment to our account
+    </p>
+</fieldset>
+
+<br>
+
 <button id="generate" type="button">Generate HTML</button>
 
-<textarea id="copy-html" cols="100" rows="10">
-</textarea>
+<div id="copy-area">
+    <p>That's it!  Now copy the HTML below into any page on which you want
+    to allow users to make payments and learn your policies. </p>
+    <textarea id="copy-html" cols="100" rows="10">
+    </textarea>
+</div>
 </form>
 </body>
 </html>
