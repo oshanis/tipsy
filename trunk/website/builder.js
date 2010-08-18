@@ -9,11 +9,6 @@ urlize = function(url) {
 }
 
 
-if (tipsy !== undefined) {
-    tipsy.run({organization_name : "",
-                organization_url : ""})
-}
-
 generate_html = function() {
     // TODO: do some field verification and error correction
     organization_url = urlize(jQuery('#orgurl').val());
@@ -28,12 +23,13 @@ generate_html = function() {
     };
     var html = new EJS({url: 'template.ejs'}).render(data);
     jQuery('#copy-html').val(html);
-    jQuery('#copy-html').css("display", "block");
+    jQuery('#copy-area').css("display", "block");
+    jQuery('#copy-area').focus();
 };
 
 jQuery(document).ready(function() {
     pick_paymethod();
-    jQuery("#copy-html").css("display", "none");
+    jQuery("#copy-area").css("display", "none");
     jQuery("#paymethod-choice").change(pick_paymethod);
     jQuery("#generate").click(generate_html);
 });
