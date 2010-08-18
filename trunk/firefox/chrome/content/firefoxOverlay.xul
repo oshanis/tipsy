@@ -34,15 +34,8 @@
                 </menupopup>
             </toolbarbutton>
 
-            <toolbarbutton type = "menu-button" id = "vendor-button-inactive-rdfa"
-                tooltiptext = "Site"
-                class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
-            </toolbarbutton>
-
-			<!--this button is currently buggy, hence the above code has been written to replace it and this one hidden until it can be rectified/removed-->
             <toolbarbutton type = "menu-button" id = "vendor-button-no-rdfa"
                 tooltiptext = "Site"
-				hidden = "true"
                 class = "toolbarbutton-1 chromeclass-toolbar-additional tipsy">
             </toolbarbutton>
 
