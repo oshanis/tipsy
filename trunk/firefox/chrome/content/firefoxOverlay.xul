@@ -4,6 +4,10 @@
 <!DOCTYPE overlay SYSTEM "chrome://tipsy/locale/tipsy.dtd">
 <overlay id = "tipsyOverlay" xmlns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
+    <script type = "application/javascript" src = "http://code.jquery.com/jquery-1.4.2.min.js"/>
+    <script type = "application/javascript" src = "http://rdfquery.googlecode.com/files/jquery.rdfquery.core.min-1.0.js"/>
+    <script type = "application/javascript" src = "http://rdfquery.googlecode.com/files/jquery.rdfquery.rules.min-1.0.js"/>
+    <script type = "application/javascript" src = "http://rdfquery.googlecode.com/files/jquery.rdfquery.rdfa.min-1.0.js"/>
     <script type = "application/javascript" src = "chrome://tipsy/content/button.js"/>
     <script type = "application/javascript" src = "chrome://tipsy/content/db.js"/>
     <script type = "application/javascript" src = "chrome://tipsy/content/tipsy_parser.js"/>
