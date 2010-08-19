@@ -7,6 +7,16 @@
 in the stand-alone prefernces window and will crash firefox, Ahmad -->
 <page id = "sbTipsy" title = "&tipsy.title;" xmlns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
+    <script type = "application/javascript" src = "http://code.jquery.com/jquery-1.4.2.min.js"/>
+    <script type = "application/javascript" src = "http://rdfquery.googlecode.com/files/jquery.rdfquery.core.min-1.0.js"/>
+    <script type = "application/javascript" src = "http://rdfquery.googlecode.com/files/jquery.rdfquery.rules.min-1.0.js"/>
+    <script type = "application/javascript" src = "http://rdfquery.googlecode.com/files/jquery.rdfquery.rdfa.min-1.0.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/button.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/db.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/tipsy_parser.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/tipsy_ui.js"/>
+    <script type = "application/javascript" src = "chrome://tipsy/content/log.js"/>
+
     <!--Need to merge with the BrowserPreferences window -->
     <prefwindow id = "BrowserPreferences">
 

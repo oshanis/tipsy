@@ -7,7 +7,7 @@
 //var sidebar = top.document.getElementById("sidebar");
             
 refreshTable = function(){
-    
+    try{
     var visits = tipsy.db.getvisits();
     var website_history = document.getElementById("website_history");
     
@@ -37,13 +37,17 @@ refreshTable = function(){
         row.appendChild(datetime_cell);
 
         website_history.appendChild(row);
-        
 
+    }
+    }
+    catch(e){
+        alert(e);
     }
     
 }
 
-sidebar.contentWindow.addEventListener( "DOMContentLoaded", refreshTable, false);
+//sidebar.contentWindow.addEventListener( "DOMContentLoaded", refreshTable, false);
+//prefwindow.addEventListener( "DOMContentLoaded", refreshTable, false);
   
 /** Clears the tipsy history containing the sites visited by the user, and sites liked by the user**/
 clearHistory = function(){
