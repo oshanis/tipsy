@@ -13,6 +13,7 @@
     <script type = "application/javascript" src = "chrome://tipsy/content/tipsy_parser.js"/>
     <script type = "application/javascript" src = "chrome://tipsy/content/tipsy_ui.js"/>
     <script type = "application/javascript" src = "chrome://tipsy/content/log.js"/>
+	<script type = "application/javascript" src = "chrome://tipsy/content/tab_listener.js"/>
 
     <!--Adding a status bar panel for easier access to Emancy Sidebar -->
     <statusbar id = "status-bar">
