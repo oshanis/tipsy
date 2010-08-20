@@ -16,6 +16,7 @@ var tipsy = {
     },
     onPageLoad: function(aEvent) {
         
+		//alert('onPageLoad entered');
         tipsy.changeVendorButtonColor('grey');
 
         var doc = aEvent.originalTarget;
@@ -41,8 +42,57 @@ var tipsy = {
                 }
         
     },
+	
+	/* //Tried to directly check for tab events using 'onTabChange' and 'onTabSitch' but these did not work
+	    onTabChange: function(aEvent) {
+        
+		alert('onTabChange entered');
+		tipsy.changeVendorButtonColor('grey');
+		        if (doc instanceof HTMLDocument){
+
+            //Try to parse the RDFa out of the HTML
+            var rdf = $('#tipsy')
+                 .rdf()
+                 .prefix('pmt','http://tipsy.googlecode.com/svn/trunk/vocab/pmt#')
+                 .prefix('rdfs','http://www.w3.org/2000/01/rdf-schema#')
+                 .prefix('dc', 'http://purl.org/dc/elements/1.1/')
+                 .where('?method pmt:username ?username')
+                 .where('?doc pmt:hasPaymentMethod ?method')
+                 .where('?creator dc:creator ?site')
+                 .each(function(){
+                    tipsy.changeVendorButtonColor('red');
+
+                 });
+                 
+                
+                }
+        
+    },*/
     
-    changeVendorButtonColor: function (color){
+	//So now I am trying to call the function below from the tab_listener file once a progress event has be identified.
+	switchVendorButtons: function (aEvent){
+			tipsy.changeVendorButtonColor('grey');
+	        var doc = aEvent.originalTarget;
+        if (doc instanceof HTMLDocument){
+
+            //Try to parse the RDFa out of the HTML
+            var rdf = $('#tipsy')
+                 .rdf()
+                 .prefix('pmt','http://tipsy.googlecode.com/svn/trunk/vocab/pmt#')
+                 .prefix('rdfs','http://www.w3.org/2000/01/rdf-schema#')
+                 .prefix('dc', 'http://purl.org/dc/elements/1.1/')
+                 .where('?method pmt:username ?username')
+                 .where('?doc pmt:hasPaymentMethod ?method')
+                 .where('?creator dc:creator ?site')
+                 .each(function(){
+                    tipsy.changeVendorButtonColor('red');
+
+                 });
+                
+                }
+    },
+	
+	    changeVendorButtonColor: function (color){
         var redbutton = document.getElementById('vendor-button-active-rdfa');
         var greybutton = document.getElementById('vendor-button-no-rdfa');
         if (color == 'red'){
@@ -55,7 +105,7 @@ var tipsy = {
 
         }
     },
-    
+	
 };
 
 //Create and open the tipsy db (Note: Moved this out of the init method because, we would like to have the db before the document content is loaded)
