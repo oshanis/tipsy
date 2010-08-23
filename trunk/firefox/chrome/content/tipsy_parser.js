@@ -71,6 +71,7 @@ var tipsy = {
     
 	//So now I am trying to call the function below from the tab_listener file once a progress event has be identified.
 	switchVendorButtons: function (aEvent){
+        alert('calling switchvendorbuttons');
 			tipsy.changeVendorButtonColor('grey');
 	        var doc = aEvent.originalTarget;
         if (doc instanceof HTMLDocument){
