@@ -36,7 +36,6 @@ var myExt_urlBarListener = {
      if (aURI.spec == this.oldURL)  
        return;  
     
-	 //alert('SUCESS - Emancy is recognising when a tab change occurs. Now we need to call the switchVendorButtons function from here');
 	 tipsy.switchVendorButtons('aEvent');
 	 
    },
