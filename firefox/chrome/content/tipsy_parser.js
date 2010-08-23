@@ -15,10 +15,8 @@ var tipsy = {
         }
     },
     onPageLoad: function(aEvent) {
-        
-		//alert('onPageLoad entered');
-        tipsy.changeVendorButtonColor('grey');
-
+        //the commented line below is longer needed as the button is greyed out once a tab change occurs, see switchVendorButtons()
+        //tipsy.changeVendorButtonColor('grey');
         var doc = aEvent.originalTarget;
         if (doc instanceof HTMLDocument){
 
@@ -43,39 +41,16 @@ var tipsy = {
         
     },
 	
-	/* //Tried to directly check for tab events using 'onTabChange' and 'onTabSitch' but these did not work
-	    onTabChange: function(aEvent) {
-        
-		alert('onTabChange entered');
-		tipsy.changeVendorButtonColor('grey');
-		        if (doc instanceof HTMLDocument){
-
-            //Try to parse the RDFa out of the HTML
-            var rdf = $('#tipsy')
-                 .rdf()
-                 .prefix('pmt','http://tipsy.googlecode.com/svn/trunk/vocab/pmt#')
-                 .prefix('rdfs','http://www.w3.org/2000/01/rdf-schema#')
-                 .prefix('dc', 'http://purl.org/dc/elements/1.1/')
-                 .where('?method pmt:username ?username')
-                 .where('?doc pmt:hasPaymentMethod ?method')
-                 .where('?creator dc:creator ?site')
-                 .each(function(){
-                    tipsy.changeVendorButtonColor('red');
-
-                 });
-                 
-                
-                }
-        
-    },*/
     
-	//So now I am trying to call the function below from the tab_listener file once a progress event has be identified.
+	//the function below will be called from the tab_listener file once a progress event has be identified.
+	//we may need to utilise something other than aEvent as this does not seem to be parsed correctly
 	switchVendorButtons: function (aEvent){
-        alert('calling switchvendorbuttons');
 			tipsy.changeVendorButtonColor('grey');
 	        var doc = aEvent.originalTarget;
+			
+		//*problem - currently on a tab change the if statement is not being executed, I think this may be to do with 'aEvent' - Ahmad
         if (doc instanceof HTMLDocument){
-
+			alert('Document is considered as a HTML doc');
             //Try to parse the RDFa out of the HTML
             var rdf = $('#tipsy')
                  .rdf()
@@ -87,7 +62,6 @@ var tipsy = {
                  .where('?creator dc:creator ?site')
                  .each(function(){
                     tipsy.changeVendorButtonColor('red');
-
                  });
                 
                 }
