@@ -35,9 +35,9 @@ in the stand-alone prefernces window and will crash firefox, Ahmad -->
             <tabbox id = "emancyTabList" selectedIndex = "0">
                 <tabs>
                     <tab label = "My Terms"/>
+                    <tab label = "Activity"/>
                     <tab label = "My Payment Preferences"/>
                     <tab label = "My Relationships"/>
-                    <tab label = "Activity"/>
                 </tabs>
                 <tabpanels>
 
@@ -58,10 +58,16 @@ in the stand-alone prefernces window and will crash firefox, Ahmad -->
                                         <groupbox>
                                             <caption label = "Adjust your Emancy configuration regarding how vendors may process your data"/>
                                             <radiogroup id = "configuration-radiogroup" preference = "configuration-pref">
-                                                <radio id = "TBC1" label = "--------------------------------------------------------------------------------------" selected = "true" tabindex = "1"/>
-                                                <radio id = "TBC2" label = "--------------------------------------------------------------------------------------" tabindex = "2"/>
-                                                <radio id = "TBC3" label = "--------------------------------------------------------------------------------------" tabindex = "3"/>
-                                                <radio id = "TBC4" label = "--------------------------------------------------------------------------------------" tabindex = "4"/>
+                                                <radio id = "TBC1" label =
+                                                "Vendors must ask my
+                                                permission to get access
+                                                to my personal data store" selected = "true" tabindex = "1"/>
+                                                <radio id = "TBC2" label =
+                                                "Vendors can share my
+                                                content with third-parties" tabindex = "2"/>
+                                                <radio id = "TBC3" label =
+                                                "Vendors can sell my
+                                                content to third-parties" tabindex = "3"/>
                                             </radiogroup>
                                         </groupbox>
                                         <groupbox>
@@ -78,10 +84,11 @@ in the stand-alone prefernces window and will crash firefox, Ahmad -->
                                         <groupbox>
                                             <caption label = "Adjust your Emancy configuration regarding relationship longevity"/>
                                             <radiogroup id = "configuration-radiogroup" preference = "configuration-pref">
-                                                <radio id = "TBC5" label = "--------------------------------------------------------------------------------------" selected = "true" tabindex = "1"/>
-                                                <radio id = "TBC6" label = "--------------------------------------------------------------------------------------" tabindex = "2"/>
-                                                <radio id = "TBC7" label = "--------------------------------------------------------------------------------------" tabindex = "3"/>
-                                                <radio id = "TBC8" label = "--------------------------------------------------------------------------------------" tabindex = "4"/>
+                                                <radio id = "TBC5" label = "Relationships are session-based" selected = "true" tabindex = "1"/>
+                                                <radio id = "TBC6" label =
+                                                "Relationships should not last more than a week" tabindex = "2"/>
+                                                <radio id = "TBC7" label =
+                                                "Relationships can last indefinitely" tabindex = "3"/>
                                             </radiogroup>
                                         </groupbox>
                                     </vbox>
@@ -93,10 +100,15 @@ in the stand-alone prefernces window and will crash firefox, Ahmad -->
                                         <groupbox>
                                             <caption label = "Adjust your Emancy configuration regarding your advertising preferences"/>
                                             <radiogroup id = "configuration-radiogroup" preference = "configuration-pref">
-                                                <radio id = "TBC9" label = "--------------------------------------------------------------------------------------" selected = "true" tabindex = "1"/>
-                                                <radio id = "TBC10" label = "--------------------------------------------------------------------------------------" tabindex = "2"/>
-                                                <radio id = "TBC11" label = "--------------------------------------------------------------------------------------" tabindex = "3"/>
-                                                <radio id = "TBC12" label = "--------------------------------------------------------------------------------------" tabindex = "4"/>
+                                                <radio id = "TBC9" label =
+                                                "Vendors may not show me
+                                                advertisements which place
+                                                third-party cookies in my
+                                                browser" selected = "true" tabindex = "1"/>
+                                                <radio id = "TBC10" label =
+                                                "Vendors can not advertise
+                                                to me if I provide them
+                                                with monetary compensation" tabindex = "2"/>
                                             </radiogroup>
                                         </groupbox>
                                     </vbox>
@@ -105,39 +117,6 @@ in the stand-alone prefernces window and will crash firefox, Ahmad -->
                         </tabbox>
                     </vbox>
 
-                    <!--Second panel-->
-                    <tabpanel>
-                        <groupbox>
-                            <hbox>
-                                <label value = "How much is the web worth to you? "/>
-                                <textbox id = "web-worth" maxlength = "5" size = "5" oninput = "validateWebWorth" value = "$"/>
-                            </hbox>
-                            <hbox>
-                                <radiogroup flex = "1">
-                                    <label value = "How frequently do you want to run the election?"/>
-                                    <radio label = "Once a week" oncommand = "validateFrequency()"/>
-                                    <radio label = "Once every two weeks" oncommand = "validateFrequency()"/>
-                                    <radio label = "Once a month" selected = "true" oncommand = "validateFrequency()"/>
-                                    <radio label = "Once every two months" oncommand = "validateFrequency()"/>
-                                    <radio label = "Once every six months" oncommand = "validateFrequency()"/>
-                                </radiogroup>
-                            </hbox>
-                            <hbox>
-                                <label value = "Your PayPal Account:"/>
-                                <textbox oninput = "changePayPalAccount()"/>
-                            </hbox>
-                            <hbox>
-                                <button oncommand = "updateInfo()">
-                                    <label width = "20">Save Information</label>
-                                </button>
-                            </hbox>
-                        </groupbox>
-                    </tabpanel>
-
-                    <!--Third panel-->
-                    <tabpanel></tabpanel>
-
-                    <!--Fourth panel-->
                     <tabpanel>
                         <groupbox>
                             <hbox pack = "start">
@@ -172,6 +151,37 @@ in the stand-alone prefernces window and will crash firefox, Ahmad -->
                             </hbox>
                         </groupbox>
                     </tabpanel>
+                    
+                    <tabpanel>
+                        <groupbox>
+                            <hbox>
+                                <label value = "How much is the web worth to you? "/>
+                                <textbox id = "web-worth" maxlength = "5" size = "5" oninput = "validateWebWorth" value = "$"/>
+                            </hbox>
+                            <hbox>
+                                <radiogroup flex = "1">
+                                    <label value = "How frequently do you want to run the election?"/>
+                                    <radio label = "Once a week" oncommand = "validateFrequency()"/>
+                                    <radio label = "Once every two weeks" oncommand = "validateFrequency()"/>
+                                    <radio label = "Once a month" selected = "true" oncommand = "validateFrequency()"/>
+                                    <radio label = "Once every two months" oncommand = "validateFrequency()"/>
+                                    <radio label = "Once every six months" oncommand = "validateFrequency()"/>
+                                </radiogroup>
+                            </hbox>
+                            <hbox>
+                                <label value = "Your PayPal Account:"/>
+                                <textbox oninput = "changePayPalAccount()"/>
+                            </hbox>
+                            <hbox>
+                                <button oncommand = "updateInfo()">
+                                    <label width = "20">Save Information</label>
+                                </button>
+                            </hbox>
+                        </groupbox>
+                    </tabpanel>
+
+                    <tabpanel></tabpanel>
+
                 </tabpanels>
             </tabbox>
         </prefpane>
